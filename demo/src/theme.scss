@@ -1,0 +1,56 @@
+$primary: #667eea;
+$secondary: #764ba2;
+$gradient: linear-gradient(135deg, $primary 0%, $secondary 100%);
+
+.login-pf body {
+  background: $gradient;
+}
+
+#kc-header-wrapper {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+// Showcase: SCSS nesting, variables, etc.
+#kc-form-login {
+  .btn-primary {
+    background: $primary;
+    border-color: darken($primary, 10%);
+
+    &:hover {
+      background: darken($primary, 10%);
+    }
+  }
+}
+
+// React password strength widget
+.password-strength {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.password-strength-bar {
+  flex: 1;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.password-strength-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.password-strength-label {
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 52px;
+  text-align: right;
+}

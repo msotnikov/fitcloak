@@ -1,0 +1,32 @@
+{
+  "serverConfig": {
+    "port": 3030,
+    "theme": "themes/modules/theme/modules",
+    "keycloakThemesPath": "keycloak/base/themes/src/main/resources/theme",
+    "devResourcesUrl": "http://localhost:5173/",
+    "qaRealms": {
+      "master": ["my-app"],
+      "dev-realm": ["frontend", "admin"]
+    }
+  },
+  "realm": {
+    "name": "myrealm",
+    "displayName": "My Realm"
+  },
+  "locale": {
+    "current": "en"
+  },
+  "client": {
+    "clientId": "my-app",
+    "name": "My Application"
+  },
+  "url": {
+    "loginAction": "/auth/realms/myrealm/login-actions/authenticate",
+    "loginUrl": "/auth/realms/myrealm/protocol/openid-connect/auth",
+    "loginResetCredentialsUrl": "/auth/realms/myrealm/login-actions/reset-credentials",
+    "registrationUrl": "/auth/realms/myrealm/login-actions/registration",
+    "registrationAction": "/auth/realms/myrealm/login-actions/registration",
+    "resourcesPath": "/resources",
+    "resourcesCommonPath": "/resources/common"
+  }
+}

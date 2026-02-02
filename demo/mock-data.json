@@ -1,0 +1,280 @@
+{
+  "realm": {
+    "name": "demo-realm",
+    "displayName": "Demo Realm",
+    "displayNameHtml": "Simple <b>Realm</b>",
+    "internationalizationEnabled": true,
+    "password": true,
+    "registrationAllowed": true,
+    "resetPasswordAllowed": true,
+    "rememberMe": true,
+    "loginWithEmailAllowed": true,
+    "registrationEmailAsUsername": true,
+    "duplicateEmailsAllowed": false,
+    "editUsernameAllowed": true
+  },
+  "pageId": 1,
+  "client": {
+    "baseUrl": "http://localhost:3030",
+    "clientId": "demo-app",
+    "name": "Demo Application"
+  },
+  "url": {
+    "resourcesPath": "/resources",
+    "resourcesCommonPath": "/resources/common",
+    "loginAction": "/login-action",
+    "registrationAction": "/login-action",
+    "registrationUrl": "/register",
+    "loginResetCredentialsUrl": "/login-reset-password",
+    "loginUrl": "/login",
+    "ssoLoginInOtherTabsUrl": "/sso-check",
+    "oauth2DeviceVerificationAction": "/device-verify",
+    "oauthAction": "/login-action",
+    "logoutConfirmAction": "/login-action",
+    "requestUri": "/login-reset-password"
+  },
+  "auth": {
+    "attemptedUsername": "user@example.com",
+    "showUsername": true,
+    "showResetCredentials": true,
+    "showTryAnotherWayLink": false,
+    "selectedCredential": "",
+    "authenticationSelections": [
+      {
+        "authExecId": "1",
+        "displayName": "Authenticator 1",
+        "helpText": "Description for Authenticator 1",
+        "iconCssClass": "fa fa-key"
+      },
+      {
+        "authExecId": "2",
+        "displayName": "Authenticator 2",
+        "helpText": "Description for Authenticator 2",
+        "iconCssClass": "fa fa-mobile"
+      }
+    ]
+  },
+  "lang": "en",
+  "locale": {
+    "current": "en",
+    "rtl": false,
+    "currentLanguageTag": "en",
+    "supported": [
+      { "url": "?lang=en", "label": "English" },
+      { "url": "?lang=ru", "label": "Русский" }
+    ]
+  },
+  "message": {
+    "type": "warning",
+    "summary": "This is a test message"
+  },
+  "login": {
+    "username": "",
+    "rememberMe": true
+  },
+  "register": {
+    "formData": {
+      "phoneNumber": "",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "username": "johndoe"
+    }
+  },
+  "social": {
+    "displayInfo": true,
+    "providers": [
+      {
+        "alias": "google",
+        "displayName": "Google",
+        "loginUrl": "/mock-google-login",
+        "iconClasses": "fa fa-google"
+      },
+      {
+        "alias": "yandex",
+        "displayName": "Yandex",
+        "loginUrl": "/mock-facebook-login",
+        "iconClasses": "fa fa-facebook"
+      },
+      {
+        "alias": "gosuslugi",
+        "displayName": "Госуслуги",
+        "loginUrl": "/mock-facebook-login"
+      }
+    ]
+  },
+  "totp": {
+    "enabled": true,
+    "otpCredentials": [
+      { "id": "1", "userLabel": "My Authenticator" }
+    ],
+    "policy": {
+      "type": "totp",
+      "algorithm": "HmacSHA1",
+      "digits": 6,
+      "lookAheadWindow": 1,
+      "period": 30
+    },
+    "supportedApplications": ["FreeOTP", "Google Authenticator"],
+    "qrUrl": "#",
+    "manualUrl": "#",
+    "totpSecretEncoded": "JBSWY3DPEHPK3PXP",
+    "totpSecretQrCode": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+    "totpSecret": "JBSWY3DPEHPK3PXP"
+  },
+  "otpLogin": {
+    "userOtpCredentials": [
+      { "id": "1", "userLabel": "My Authenticator" }
+    ],
+    "selectedCredentialId": "1"
+  },
+  "code": {
+    "success": true,
+    "error": "Error message",
+    "code": "123456"
+  },
+  "user": {
+    "username": "user",
+    "email": "user@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "attributes": {},
+    "editUsernameAllowed": true
+  },
+  "username": "user",
+  "usernameHidden": false,
+  "link": "http://localhost:3030/reset-password-link",
+  "linkExpiration": "30",
+  "realmName": "Simple Realm",
+  "properties": {
+    "one-scripts": "src/index.ts",
+    "two": "src/index.css",
+    "three": "message"
+  },
+  "profile": {
+    "attributes": [
+      {
+        "name": "firstName",
+        "displayName": "${firstName}",
+        "value": "",
+        "required": true,
+        "readOnly": false,
+        "autocomplete": "given-name",
+        "annotations": {},
+        "html5DataAnnotations": {},
+        "validators": {},
+        "multivalued": false,
+        "values": []
+      },
+      {
+        "name": "lastName",
+        "displayName": "${lastName}",
+        "value": "",
+        "required": true,
+        "readOnly": false,
+        "autocomplete": "family-name",
+        "annotations": {},
+        "html5DataAnnotations": {},
+        "validators": {},
+        "multivalued": false,
+        "values": []
+      },
+      {
+        "name": "email",
+        "displayName": "${email}",
+        "value": "",
+        "required": true,
+        "readOnly": false,
+        "autocomplete": "email",
+        "annotations": {},
+        "html5DataAnnotations": {},
+        "validators": {},
+        "multivalued": false,
+        "values": []
+      },
+      {
+        "name": "username",
+        "displayName": "${username}",
+        "value": "",
+        "required": true,
+        "readOnly": false,
+        "autocomplete": "username",
+        "annotations": {},
+        "html5DataAnnotations": {},
+        "validators": {},
+        "multivalued": false,
+        "values": []
+      }
+    ],
+    "html5DataAnnotations": {}
+  },
+  "usernameEditDisabled": false,
+  "passwordRequired": true,
+  "recaptchaRequired": false,
+  "recaptchaSiteKey": "1LeIxAcTAAAAAJcZVRqyXh52UMIEGNQ_MXjiZKhI",
+  "recaptchaAction": "register",
+  "messagesPerField": {
+    "existsError": false,
+    "getFirstError": ""
+  },
+  "isAppInitiatedAction": false,
+  "messageHeader": "Message Header",
+  "requiredActions": [],
+  "skipLink": false,
+  "pageRedirectUri": "http://localhost:3030/redirect",
+  "actionUri": "http://localhost:3030/action",
+  "idpAlias": "google",
+  "brokerContext": {
+    "username": "broker-user"
+  },
+  "oauth": {
+    "clientScopesRequested": [
+      { "consentScreenText": "Access your profile" },
+      { "consentScreenText": "Access your email" }
+    ],
+    "code": "oauth-code-123"
+  },
+  "x509": {
+    "formData": {
+      "subjectDN": "CN=John Doe, OU=IT, O=Example Corp, C=US",
+      "username": "johndoe"
+    }
+  },
+  "samlPost": {
+    "url": "/saml-post",
+    "SAMLRequest": "base64-saml-request",
+    "SAMLResponse": "base64-saml-response",
+    "relayState": "relay-state-123"
+  },
+  "triggered_from_aia": false,
+  "logout": {
+    "clients": [
+      { "name": "Client App 1", "frontChannelLogoutUrl": "#" },
+      { "name": "Client App 2", "frontChannelLogoutUrl": "#" }
+    ],
+    "logoutRedirectUri": "/login"
+  },
+  "logoutConfirm": {
+    "code": "logout-code-123",
+    "skipLink": false
+  },
+  "attestationConveyancePreference": "",
+  "authenticatorAttachment": "",
+  "challenge": "",
+  "createTimeout": 10,
+  "excludeCredentialIds": "",
+  "requireResidentKey": "true",
+  "rpEntityName": "rpEntityName",
+  "rpId": "rpId",
+  "signatureAlgorithms": "signatureAlgorithms",
+  "userid": "userid",
+  "userVerificationRequirement": "userVerificationRequirement",
+  "isUserIdentified": "isUserIdentified",
+  "userVerification": "userVerification",
+  "configuredOtpCredentials": {
+    "userOtpCredentials": []
+  },
+  "phoneNumberRequired": true,
+  "verifyPhone": true,
+  "registrationPhoneNumberAsUsername": true
+}

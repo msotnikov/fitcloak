@@ -7,3 +7,13 @@ out/
 *.log
 node_modules/
 .vscode/
+.claude/
+
+# User-specific config (use config.example.json as template)
+config.json
+
+# Downloaded Keycloak themes
+keycloak/
+
+# Custom themes (user's own)
+themes/

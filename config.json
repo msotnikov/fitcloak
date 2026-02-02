@@ -1,0 +1,12 @@
+{
+  "serverConfig": {
+    "port": 3030,
+    "theme": "demo",
+    "keycloakThemesPath": "keycloak/base/themes/src/main/resources/theme",
+    "devResourcesUrl": "http://localhost:5174/",
+    "qaRealms": {
+      "master": ["app1", "app2"],
+      "realm2": ["master"]
+    }
+  }
+}

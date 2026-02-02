@@ -1,0 +1,46 @@
+plugins {
+    id 'application'
+}
+
+version = '0.1.0'
+group = 'io.fitcloak'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.freemarker:freemarker:2.3.32'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+application {
+    mainClass = 'fitcloak.PreviewServer'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'fitcloak.PreviewServer',
+            'Implementation-Version': project.version
+        )
+    }
+}
+
+run {
+    standardInput = System.in
+}
