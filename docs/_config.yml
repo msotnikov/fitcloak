@@ -1,6 +1,6 @@
 title: Fitcloak
 description: A lightweight local preview server for developing native Keycloak FreeMarker themes
-baseurl: /fitcloak
+baseurl: ""
 
 remote_theme: just-the-docs/just-the-docs
 
