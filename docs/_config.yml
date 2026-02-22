@@ -4,6 +4,8 @@ baseurl: ""
 
 remote_theme: just-the-docs/just-the-docs
 
+logo: /assets/images/logo.svg
+
 search_enabled: true
 heading_anchors: true
 

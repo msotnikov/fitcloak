@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <path d="M8 4h24l-2 28-10 6-10-6z" fill="#4051B5" stroke="#4051B5" stroke-width="1" stroke-linejoin="round"/>
+  <text x="13" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#fff">F</text>
+  <text x="38" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" fill="#2D3047" letter-spacing="-0.5">fitcloak</text>
+</svg>
