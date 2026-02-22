@@ -61,10 +61,10 @@ Se stai scrivendo file `.ftl` personalizzati, usa l'operatore `!` (predefinito) 
 <#if (realm.password)!true>
 ```
 
-L'operatore `!` fornisce un fallback quando il valore e mancante. `(realm.password)!true` significa "usa `realm.password` se esiste, altrimenti `true`".
+L'operatore `!` fornisce un fallback quando il valore è mancante. `(realm.password)!true` significa "usa `realm.password` se esiste, altrimenti `true`".
 
 ## Trovare quali variabili necessita un template
 
 I template Keycloak fanno riferimento a molte variabili (`realm`, `url`, `auth`, `login`, `social`, `properties`, ecc.). Quando sovrascrivi o aggiungi un nuovo file `.ftl`, potresti dover fornire valori simulati aggiuntivi.
 
-**Approccio:** esamina il file `.ftl`, trova tutte le espressioni `${...}` e le condizioni `<#if ...>`, poi assicurati che ogni oggetto referenziato esista nei tuoi dati simulati. Il [`mock-data.json`](https://github.com/msotnikov/fitcloak/blob/main/demo/mock-data.json) della demo e un buon punto di partenza da cui copiare.
+**Approccio:** esamina il file `.ftl`, trova tutte le espressioni `${...}` e le condizioni `<#if ...>`, poi assicurati che ogni oggetto referenziato esista nei tuoi dati simulati. Il [`mock-data.json`](https://github.com/msotnikov/fitcloak/blob/main/demo/mock-data.json) della demo è un buon punto di partenza da cui copiare.

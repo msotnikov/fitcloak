@@ -7,21 +7,21 @@ permalink: /tr/vite-integration/
 
 # Vite / HMR Entegrasyonu
 
-Dahil edilen `demo/` dizini, SCSS ve React ile Vite entegrasyonunun calisan bir ornegidir.
+Dahil edilen `demo/` dizini, SCSS ve React ile Vite entegrasyonunun çalışan bir örneğidir.
 
-## Nasil calisir
+## Nasıl çalışır
 
-1. Yapilandirmada `devResourcesUrl` ayarlayin: `"http://localhost:5173/"`
-2. `theme.properties` dosyasinda kaynak dosyalara dogrudan referans verin: `styles=css/login.css src/theme.scss`
-3. Fitcloak `/resources/*`, `/src/*`, `/@*`, `/node_modules/*` yollarini Vite gelistirme sunucusuna yonlendirir
-4. Vite, SCSS, JSX, TypeScript (veya diger on islemcileri) aninda derler
-5. Gelistirme sunucusu kullanilamazsa yerel dosyalara geri doner
+1. Yapılandırmada `devResourcesUrl` ayarlayın: `"http://localhost:5173/"`
+2. `theme.properties` dosyasında kaynak dosyalara doğrudan referans verin: `styles=css/login.css src/theme.scss`
+3. Fitcloak `/resources/*`, `/src/*`, `/@*`, `/node_modules/*` yollarını Vite geliştirme sunucusuna yönlendirir
+4. Vite, SCSS, JSX, TypeScript (veya diğer ön işlemcileri) anında derler
+5. Geliştirme sunucusu kullanılamazsa yerel dosyalara geri döner
 
-## Kendi temanizla kullanma
+## Kendi temanızla kullanma
 
-Tema dizininizde SCSS/PostCSS/vb. ile bir Vite projesi olusturun, `theme.properties` dosyasinda kaynak dosyalara referans verin ve `devResourcesUrl`'yi Vite'a yonlendirin.
+Tema dizininizde SCSS/PostCSS/vb. ile bir Vite projesi oluşturun, `theme.properties` dosyasında kaynak dosyalara referans verin ve `devResourcesUrl`'yi Vite'a yönlendirin.
 
-### Ornek: SCSS ekleme
+### Örnek: SCSS ekleme
 
 ```bash
 cd your-theme
@@ -29,7 +29,7 @@ npm init -y
 npm install --save-dev vite sass
 ```
 
-`vite.config.js` olusturun:
+`vite.config.js` oluşturun:
 
 ```js
 import { defineConfig } from 'vite'
@@ -39,13 +39,13 @@ export default defineConfig({
 })
 ```
 
-`login/theme.properties` dosyasinda SCSS'e referans verin:
+`login/theme.properties` dosyasında SCSS'e referans verin:
 
 ```properties
 parent=keycloak
 styles=css/login.css src/theme.scss
 ```
 
-### Ornek: React ekleme
+### Örnek: React ekleme
 
-Demo tema bu deseni gosterir — giris sayfasini gelistiren bir React bileseni icin `demo/src/PasswordStrength.jsx` dosyasina bakin. Onemli olan, standart `properties.scripts` mekanizmasi yerine ozel `.ftl` sablonunuzda `<script type="module">` kullanmaktir.
+Demo tema bu deseni gösterir — giriş sayfasını geliştiren bir React bileşeni için `demo/src/PasswordStrength.jsx` dosyasına bakın. Önemli olan, standart `properties.scripts` mekanizması yerine özel `.ftl` şablonunuzda `<script type="module">` kullanmaktır.

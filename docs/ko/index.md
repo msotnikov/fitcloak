@@ -2,6 +2,7 @@
 title: "홈"
 nav_exclude: true
 lang: ko
+layout: home
 permalink: /ko/
 ---
 

@@ -2,6 +2,7 @@
 title: "Startseite"
 nav_exclude: true
 lang: de
+layout: home
 permalink: /de/
 ---
 

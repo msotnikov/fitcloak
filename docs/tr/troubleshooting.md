@@ -7,18 +7,18 @@ permalink: /tr/troubleshooting/
 
 # Sorun Giderme
 
-## "has evaluated to null or missing" hatalari
+## "has evaluated to null or missing" hataları
 
 ```
 Template error in login.ftl: The following has evaluated to null or missing:
 ==> realm.password  [in template "login.ftl" at line 2, column 109]
 ```
 
-Bu, bir FreeMarker sablonunun sahte veride bulunmayan bir degiskene referans verdigi anlamina gelir. Gercek bir Keycloak orneginde bu degiskenler sunucu tarafindan doldurulur — Fitcloak'ta bunlari JSON araciligiyla siz saglarsiniz.
+Bu, bir FreeMarker şablonunun sahte veride bulunmayan bir değişkene referans verdiği anlamına gelir. Gerçek bir Keycloak örneğinde bu değişkenler sunucu tarafından doldurulur — Fitcloak'ta bunları JSON aracılığıyla siz sağlarsınız.
 
-### Cozum 1: Eksik degiskeni sahte veriye ekleyin
+### Çözüm 1: Eksik değişkeni sahte veriye ekleyin
 
-Temanizin `mock-data.json` (veya `config.json`) dosyasini acin ve eksik alani ekleyin:
+Temanızın `mock-data.json` (veya `config.json`) dosyasını açın ve eksik alanı ekleyin:
 
 ```json
 {
@@ -29,42 +29,42 @@ Temanizin `mock-data.json` (veya `config.json`) dosyasini acin ve eksik alani ek
 }
 ```
 
-Keycloak sablonlarinin beklediği yaygin `realm` alanlari:
+Keycloak şablonlarının beklediği yaygın `realm` alanları:
 
-| Alan | Tur | Tipik deger | Kullanan |
+| Alan | Tür | Tipik değer | Kullanan |
 |------|-----|-------------|----------|
-| `password` | boolean | `true` | `login.ftl` — parola formunun gosterilip gosterilmeyecegini kontrol eder |
-| `registrationAllowed` | boolean | `true` | `login.ftl` — "Kayit Ol" baglantisi |
-| `resetPasswordAllowed` | boolean | `true` | `login.ftl` — "Parolanizi mi unuttunuz" baglantisi |
-| `rememberMe` | boolean | `true` | `login.ftl` — "Beni hatirla" onay kutusu |
-| `loginWithEmailAllowed` | boolean | `true` | `login.ftl` — kullanici adi alani etiketi |
-| `registrationEmailAsUsername` | boolean | `false` | `login.ftl` — kullanici adi alani etiketi |
-| `internationalizationEnabled` | boolean | `false` | `template.ftl` — dil secici |
+| `password` | boolean | `true` | `login.ftl` — parola formunun gösterilip gösterilmeyeceğini kontrol eder |
+| `registrationAllowed` | boolean | `true` | `login.ftl` — "Kayıt Ol" bağlantısı |
+| `resetPasswordAllowed` | boolean | `true` | `login.ftl` — "Parolanızı mı unuttunuz" bağlantısı |
+| `rememberMe` | boolean | `true` | `login.ftl` — "Beni hatırla" onay kutusu |
+| `loginWithEmailAllowed` | boolean | `true` | `login.ftl` — kullanıcı adı alanı etiketi |
+| `registrationEmailAsUsername` | boolean | `false` | `login.ftl` — kullanıcı adı alanı etiketi |
+| `internationalizationEnabled` | boolean | `false` | `template.ftl` — dil seçici |
 
-### Cozum 2: URL sorgu parametreleri ile istek basina gecersiz kilma
+### Çözüm 2: URL sorgu parametreleri ile istek başına geçersiz kılma
 
-Dosyalari duzenlemeden hizli test icin kullanislidir:
+Dosyaları düzenlemeden hızlı test için kullanışlıdır:
 
 ```
 http://localhost:3030/login?realm.password=true&realm.rememberMe=false
 ```
 
-### Cozum 3: Sablonlarinizda FreeMarker varsayilanlarini kullanin
+### Çözüm 3: Şablonlarınızda FreeMarker varsayılanlarını kullanın
 
-Ozel `.ftl` dosyalari yaziyorsaniz, eksik degerlere karsi koruma icin `!` (varsayilan) operatorunu kullanin:
+Özel `.ftl` dosyaları yazıyorsanız, eksik değerlere karşı koruma için `!` (varsayılan) operatörünü kullanın:
 
 ```ftl
 <#-- Bunun yerine: -->
 <#if realm.password>
 
-<#-- Varsayilan bir deger kullanin: -->
+<#-- Varsayılan bir değer kullanın: -->
 <#if (realm.password)!true>
 ```
 
-`!` operatoru, deger eksik oldugunda bir yedek saglar. `(realm.password)!true` su anlama gelir: "`realm.password` varsa onu kullan, yoksa `true`".
+`!` operatörü, değer eksik olduğunda bir yedek sağlar. `(realm.password)!true` şu anlama gelir: "`realm.password` varsa onu kullan, yoksa `true`".
 
-## Bir sablonun hangi degiskenlere ihtiyac duydugunu bulma
+## Bir şablonun hangi değişkenlere ihtiyaç duyduğunu bulma
 
-Keycloak sablonlari bircok degiskene referans verir (`realm`, `url`, `auth`, `login`, `social`, `properties`, vb.). Yeni bir `.ftl` dosyasi gecersiz kildiginizda veya eklediginizde, ek sahte degerler saglameniz gerekebilir.
+Keycloak şablonları birçok değişkene referans verir (`realm`, `url`, `auth`, `login`, `social`, `properties`, vb.). Yeni bir `.ftl` dosyası geçersiz kıldığınızda veya eklediğinizde, ek sahte değerler sağlamanız gerekebilir.
 
-**Yaklasim:** `.ftl` dosyasina bakin, tum `${...}` ifadelerini ve `<#if ...>` kosullarini bulun, ardindan referans verilen her nesnenin sahte verinizde mevcut oldugundan emin olun. Demo'nun [`mock-data.json`](https://github.com/msotnikov/fitcloak/blob/main/demo/mock-data.json) dosyasi kopyalamak icin iyi bir baslangic noktasidir.
+**Yaklaşım:** `.ftl` dosyasına bakın, tüm `${...}` ifadelerini ve `<#if ...>` koşullarını bulun, ardından referans verilen her nesnenin sahte verinizde mevcut olduğundan emin olun. Demo'nun [`mock-data.json`](https://github.com/msotnikov/fitcloak/blob/main/demo/mock-data.json) dosyası kopyalamak için iyi bir başlangıç noktasıdır.

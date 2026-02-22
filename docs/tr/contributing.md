@@ -1,25 +1,25 @@
 ---
-title: "Katki Saglama"
+title: "Katkı Sağlama"
 nav_exclude: true
 lang: tr
 permalink: /tr/contributing/
 ---
 
-# Katki Saglama
+# Katkı Sağlama
 
-## Gelistirme
+## Geliştirme
 
 ```bash
 ./gradlew build    # Derleme
-./gradlew test     # Testleri calistir
-./gradlew run      # Sunucuyu baslat
+./gradlew test     # Testleri çalıştır
+./gradlew run      # Sunucuyu başlat
 ```
 
 Java 17+ gerektirir.
 
-## Yonergeler
+## Yönergeler
 
-Gelistirme yonergeleri ve katki is akisi icin [CONTRIBUTING.md](https://github.com/msotnikov/fitcloak/blob/main/CONTRIBUTING.md) dosyasina bakin.
+Geliştirme yönergeleri ve katkı iş akışı için [CONTRIBUTING.md](https://github.com/msotnikov/fitcloak/blob/main/CONTRIBUTING.md) dosyasına bakın.
 
 ## Lisans
 

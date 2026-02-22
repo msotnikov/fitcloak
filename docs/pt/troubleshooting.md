@@ -5,7 +5,7 @@ lang: pt
 permalink: /pt/troubleshooting/
 ---
 
-# Solucao de Problemas
+# Solução de Problemas
 
 ## Erros "has evaluated to null or missing"
 
@@ -14,9 +14,9 @@ Template error in login.ftl: The following has evaluated to null or missing:
 ==> realm.password  [in template "login.ftl" at line 2, column 109]
 ```
 
-Isso significa que um template FreeMarker referencia uma variavel que nao existe nos dados simulados. Em uma instancia Keycloak real, essas variaveis sao preenchidas pelo servidor -- no Fitcloak voce as fornece via JSON.
+Isso significa que um template FreeMarker referencia uma variável que não existe nos dados simulados. Em uma instância Keycloak real, essas variáveis são preenchidas pelo servidor -- no Fitcloak você as fornece via JSON.
 
-### Solucao 1: Adicionar a variavel ausente aos dados simulados
+### Solução 1: Adicionar a variável ausente aos dados simulados
 
 Abra o `mock-data.json` do seu tema (ou `config.json`) e adicione o campo ausente:
 
@@ -31,40 +31,40 @@ Abra o `mock-data.json` do seu tema (ou `config.json`) e adicione o campo ausent
 
 Campos `realm` comuns que os templates do Keycloak esperam:
 
-| Campo | Tipo | Valor tipico | Usado por |
+| Campo | Tipo | Valor típico | Usado por |
 |-------|------|--------------|-----------|
-| `password` | boolean | `true` | `login.ftl` -- controla se o formulario de senha e exibido |
+| `password` | boolean | `true` | `login.ftl` -- controla se o formulário de senha é exibido |
 | `registrationAllowed` | boolean | `true` | `login.ftl` -- link "Registrar" |
 | `resetPasswordAllowed` | boolean | `true` | `login.ftl` -- link "Esqueci a senha" |
 | `rememberMe` | boolean | `true` | `login.ftl` -- caixa "Lembrar-me" |
-| `loginWithEmailAllowed` | boolean | `true` | `login.ftl` -- rotulo do campo de usuario |
-| `registrationEmailAsUsername` | boolean | `false` | `login.ftl` -- rotulo do campo de usuario |
+| `loginWithEmailAllowed` | boolean | `true` | `login.ftl` -- rótulo do campo de usuário |
+| `registrationEmailAsUsername` | boolean | `false` | `login.ftl` -- rótulo do campo de usuário |
 | `internationalizationEnabled` | boolean | `false` | `template.ftl` -- seletor de idioma |
 
-### Solucao 2: Sobrescrever por requisicao via parametros de consulta URL
+### Solução 2: Sobrescrever por requisição via parâmetros de consulta URL
 
-Util para testes rapidos sem editar arquivos:
+Útil para testes rápidos sem editar arquivos:
 
 ```
 http://localhost:3030/login?realm.password=true&realm.rememberMe=false
 ```
 
-### Solucao 3: Usar valores padrao do FreeMarker nos seus templates
+### Solução 3: Usar valores padrão do FreeMarker nos seus templates
 
-Se voce esta escrevendo arquivos `.ftl` personalizados, use o operador `!` (padrao) para se proteger contra valores ausentes:
+Se você está escrevendo arquivos `.ftl` personalizados, use o operador `!` (padrão) para se proteger contra valores ausentes:
 
 ```ftl
 <#-- Em vez de: -->
 <#if realm.password>
 
-<#-- Use um valor padrao: -->
+<#-- Use um valor padrão: -->
 <#if (realm.password)!true>
 ```
 
-O operador `!` fornece um fallback quando o valor esta ausente. `(realm.password)!true` significa "use `realm.password` se existir, caso contrario `true`".
+O operador `!` fornece um fallback quando o valor está ausente. `(realm.password)!true` significa "use `realm.password` se existir, caso contrário `true`".
 
-## Descobrindo quais variaveis um template precisa
+## Descobrindo quais variáveis um template precisa
 
-Os templates do Keycloak referenciam muitas variaveis (`realm`, `url`, `auth`, `login`, `social`, `properties`, etc.). Quando voce sobrescreve ou adiciona um novo arquivo `.ftl`, pode precisar fornecer valores simulados adicionais.
+Os templates do Keycloak referenciam muitas variáveis (`realm`, `url`, `auth`, `login`, `social`, `properties`, etc.). Quando você sobrescreve ou adiciona um novo arquivo `.ftl`, pode precisar fornecer valores simulados adicionais.
 
-**Abordagem:** examine o arquivo `.ftl`, encontre todas as expressoes `${...}` e condicoes `<#if ...>`, depois certifique-se de que cada objeto referenciado exista nos seus dados simulados. O [`mock-data.json`](https://github.com/msotnikov/fitcloak/blob/main/demo/mock-data.json) da demo e um bom ponto de partida para copiar.
+**Abordagem:** examine o arquivo `.ftl`, encontre todas as expressões `${...}` e condições `<#if ...>`, depois certifique-se de que cada objeto referenciado exista nos seus dados simulados. O [`mock-data.json`](https://github.com/msotnikov/fitcloak/blob/main/demo/mock-data.json) da demo é um bom ponto de partida para copiar.

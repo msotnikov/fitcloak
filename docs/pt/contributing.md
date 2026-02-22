@@ -19,8 +19,8 @@ Requer Java 17+.
 
 ## Diretrizes
 
-Consulte [CONTRIBUTING.md](https://github.com/msotnikov/fitcloak/blob/main/CONTRIBUTING.md) para as diretrizes de desenvolvimento e o fluxo de trabalho de contribuicao.
+Consulte [CONTRIBUTING.md](https://github.com/msotnikov/fitcloak/blob/main/CONTRIBUTING.md) para as diretrizes de desenvolvimento e o fluxo de trabalho de contribuição.
 
-## Licenca
+## Licença
 
 [MIT](https://github.com/msotnikov/fitcloak/blob/main/LICENSE)

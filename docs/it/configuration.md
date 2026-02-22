@@ -25,7 +25,7 @@ I dati che Keycloak normalmente passa ai template vengono forniti tramite JSON:
 
 - **Globali**: `config.json` (campi a livello root come `realm`, `url`, `locale`)
 - **Per tema**: `<theme-dir>/mock-data.json` (sovrascrive i globali)
-- **Per richiesta**: parametri di query URL (priorita piu alta)
+- **Per richiesta**: parametri di query URL (priorità più alta)
 
 Esempio: `http://localhost:3030/login?realm.name=MyRealm&message.summary=Error&message.type=error`
 
@@ -38,4 +38,4 @@ Esempio: `http://localhost:3030/login?realm.name=MyRealm&message.summary=Error&m
 | `/email/*` | Email |
 | `/admin/*` | Admin |
 
-L'estensione `.ftl` e opzionale: `/login` e `/login.ftl` funzionano entrambi.
+L'estensione `.ftl` è opzionale: `/login` e `/login.ftl` funzionano entrambi.

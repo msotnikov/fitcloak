@@ -2,6 +2,7 @@
 title: "ホーム"
 nav_exclude: true
 lang: ja
+layout: home
 permalink: /ja/
 ---
 

@@ -33,7 +33,7 @@ Fitcloak fornisce implementazioni simulate degli oggetti FreeMarker di Keycloak:
 |--------|---------------|
 | `${msg("key")}` | Messaggio localizzato dai file `.properties` |
 | `${advancedMsg("key")}` | Come `msg` -- ricerca messaggio con la chiave come fallback |
-| `${kcSanitize(value)}` | Restituisce il valore cosi com'e (simulato) |
+| `${kcSanitize(value)}` | Restituisce il valore così com'è (simulato) |
 | `messagesPerField.existsError('field')` | Restituisce `false` |
 | `messagesPerField.get('field')` | Restituisce `""` |
 | `auth.showUsername()` | Restituisce `true` |

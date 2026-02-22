@@ -2,6 +2,7 @@
 title: "Главная"
 nav_exclude: true
 lang: ru
+layout: home
 permalink: /ru/
 ---
 

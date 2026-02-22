@@ -2,46 +2,47 @@
 title: "Ana Sayfa"
 nav_exclude: true
 lang: tr
+layout: home
 permalink: /tr/
 ---
 
 # Fitcloak
 
-**Yerel Keycloak FreeMarker temaları** geliştirmek icin hafif bir yerel onizleme sunucusu — Docker, veritabani veya tam bir Keycloak ornegi calistirmaya gerek kalmadan.
+**Yerel Keycloak FreeMarker temaları** geliştirmek için hafif bir yerel önizleme sunucusu — Docker, veritabanı veya tam bir Keycloak örneği çalıştırmaya gerek kalmadan.
 
-[Basla](./quick-start)
-[GitHub'da Gor](https://github.com/msotnikov/fitcloak)
+[Başla](./quick-start)
+[GitHub'da Gör](https://github.com/msotnikov/fitcloak)
 
 ---
 
 ## Neden Fitcloak?
 
-Keycloak'un giris/hesap/e-posta sayfalarini ozellestirmek normalde zahmetli bir geri bildirim dongusu anlamina gelir: JAR'i yeniden derle, Keycloak'u yeniden baslat, onbellegi temizle, sayfayi yenile. Fitcloak tum bunlari ortadan kaldirir — dosyanizi kaydedin ve sonucu gorun.
+Keycloak'un giriş/hesap/e-posta sayfalarını özelleştirmek normalde zahmetli bir geri bildirim döngüsü anlamına gelir: JAR'ı yeniden derle, Keycloak'u yeniden başlat, önbelleği temizle, sayfayı yenile. Fitcloak tüm bunları ortadan kaldırır — dosyanızı kaydedin ve sonucu görün.
 
-**Herhangi bir Keycloak sablonunu alin, Fitcloak'u ona yonlendirin ve gelistirmeye baslayin.** Yerlesik gelistirme sunucusu proxy'si sayesinde herhangi bir on yuz arac zincirini kullanabilirsiniz — Vite, Webpack, Parcel — herhangi bir framework veya on islemci ile: React, Vue, Svelte, SCSS, Tailwind, ne tercih ederseniz. FreeMarker sayfa yapisini olusturur, araclariniz on yuzu yonetir ve HMR geri bildirim dongusunu anlik tutar.
+**Herhangi bir Keycloak şablonunu alın, Fitcloak'u ona yönlendirin ve geliştirmeye başlayın.** Yerleşik geliştirme sunucusu proxy'si sayesinde herhangi bir ön yüz araç zincirini kullanabilirsiniz — Vite, Webpack, Parcel — herhangi bir framework veya ön işlemci ile: React, Vue, Svelte, SCSS, Tailwind, ne tercih ederseniz. FreeMarker sayfa yapısını oluşturur, araçlarınız ön yüzü yönetir ve HMR geri bildirim döngüsünü anlık tutar.
 
-Bu size modern on yuz gelistirmenin tam esnekligini sunarken Keycloak'un yerel tema sistemi icinde kalmanizi saglar: ozel SPI'lar yok, satici bagimlilik yok — sadece herhangi bir Keycloak ornegine oldugu gibi dagitilan standart `.ftl` sablonlari.
+Bu size modern ön yüz geliştirmenin tam esnekliğini sunarken Keycloak'un yerel tema sistemi içinde kalmanızı sağlar: özel SPI'lar yok, satıcı bağımlılık yok — sadece herhangi bir Keycloak örneğine olduğu gibi dağıtılan standart `.ftl` şablonları.
 
-### Fitcloak ile Keycloakify Karsilastirmasi
+### Fitcloak ile Keycloakify Karşılaştırması
 
 | | Fitcloak | [Keycloakify](https://github.com/keycloakify/keycloakify) |
 |---|---|---|
-| **Yaklasim** | Yerel FreeMarker sablonlari + herhangi bir on yuz araci | Temalara derlenen React bilesenleri |
-| **Kullanim alani** | Modern gelistirici deneyimi ile standart Keycloak temalarini ozellestirme | React ile tamamen yeni arayuzler olusturma |
-| **On yuz** | Herhangi bir framework (React, Vue, Svelte, Alpine.js, vanilla) veya hicbiri | Yalnizca React/TypeScript |
-| **Ogrenme egrisi** | FreeMarker biliyorsaniz = hazirsiniz | React/TypeScript bilgisi gerektirir |
-| **Cikti** | Standart tema dizini (herhangi bir Keycloak'ta calisir) | Derlenimis React uygulamali JAR |
+| **Yaklaşım** | Yerel FreeMarker şablonları + herhangi bir ön yüz aracı | Temalara derlenen React bileşenleri |
+| **Kullanım alanı** | Modern geliştirici deneyimi ile standart Keycloak temalarını özelleştirme | React ile tamamen yeni arayüzler oluşturma |
+| **Ön yüz** | Herhangi bir framework (React, Vue, Svelte, Alpine.js, vanilla) veya hiçbiri | Yalnızca React/TypeScript |
+| **Öğrenme eğrisi** | FreeMarker biliyorsanız = hazırsınız | React/TypeScript bilgisi gerektirir |
+| **Çıktı** | Standart tema dizini (herhangi bir Keycloak'ta çalışır) | Derlenmiş React uygulamalı JAR |
 
-Keycloakify farkli bir yol izler: FreeMarker'i tamamen bir React SPA ile degistirir ve kendi derleme hattina sahiptir. Fitcloak standart Keycloak tema sistemi ile calisir — ayni `.ftl` sablonlari, ayni dagitim, sadece cok daha iyi bir gelistirme is akisi.
+Keycloakify farklı bir yol izler: FreeMarker'ı tamamen bir React SPA ile değiştirir ve kendi derleme hattına sahiptir. Fitcloak standart Keycloak tema sistemi ile çalışır — aynı `.ftl` şablonları, aynı dağıtım, sadece çok daha iyi bir geliştirme iş akışı.
 
-## Ozellikler
+## Özellikler
 
-- **Anlik geri bildirim** — `.ftl` / `.css` / `.properties` dosyalarini duzenleyin, tarayiciyi yenileyin
-- **Tam kalitim** — Keycloak'un `Base -> Parent -> Child` tema zincirini taklit eder
-- **Vite/HMR entegrasyonu** — sicak modul degistirme icin gelistirme sunucusu proxy'si
-- **Dinamik test** — URL sorgu parametreleri araciligiyla herhangi bir sablon degiskenini gecersiz kilin
-- **Kontrol paneli** — kalitim gorsellestirmesi ve QA baglantilari ile sablon tarayicisi
-- **Sifir altyapi** — sadece Java ve Gradle, baska bir sey degil
+- **Anlık geri bildirim** — `.ftl` / `.css` / `.properties` dosyalarını düzenleyin, tarayıcıyı yenileyin
+- **Tam kalıtım** — Keycloak'un `Base -> Parent -> Child` tema zincirini taklit eder
+- **Vite/HMR entegrasyonu** — sıcak modül değiştirme için geliştirme sunucusu proxy'si
+- **Dinamik test** — URL sorgu parametreleri aracılığıyla herhangi bir şablon değişkenini geçersiz kılın
+- **Kontrol paneli** — kalıtım görselleştirmesi ve QA bağlantıları ile şablon tarayıcısı
+- **Sıfır altyapı** — sadece Java ve Gradle, başka bir şey değil
 
 ![Fitcloak Kontrol Paneli](../assets/images/screenshot-dashboard.png)
-![Fitcloak Kayit Sayfasi](../assets/images/screenshot-register.png)
+![Fitcloak Kayıt Sayfası](../assets/images/screenshot-register.png)

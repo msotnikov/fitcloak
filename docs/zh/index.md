@@ -2,6 +2,7 @@
 title: "首页"
 nav_exclude: true
 lang: zh
+layout: home
 permalink: /zh/
 ---
 

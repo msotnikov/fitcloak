@@ -15,10 +15,10 @@ permalink: /fr/cli/
 ./gradlew run --args="--version"
 ```
 
-| Drapeau | Court | Description | Par defaut |
+| Drapeau | Court | Description | Par défaut |
 |---------|-------|-------------|------------|
 | `--port` | `-p` | Port du serveur | `3030` (ou depuis la configuration) |
 | `--config` | `-c` | Chemin du fichier de configuration | `config.json` |
-| `--theme` | `-t` | Chemin du theme (surcharge la configuration) | — |
+| `--theme` | `-t` | Chemin du thème (surcharge la configuration) | — |
 | `--help` | `-h` | Afficher l'aide | — |
 | `--version` | `-v` | Afficher la version | — |

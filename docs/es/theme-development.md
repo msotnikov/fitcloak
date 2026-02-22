@@ -13,7 +13,7 @@ permalink: /es/theme-development/
 your-theme/
   login/
     theme.properties          # parent=keycloak, styles, scripts
-    login.ftl                 # Sobrescribir pagina de inicio de sesion
+    login.ftl                 # Sobrescribir página de inicio de sesión
     register.ftl              # Sobrescribir registro
     resources/
       css/styles.css
@@ -22,7 +22,7 @@ your-theme/
     messages/
       messages_en.properties
       messages_ru.properties
-  mock-data.json              # Datos de prueba especificos del tema
+  mock-data.json              # Datos de prueba específicos del tema
 ```
 
 ## Helpers de plantilla
@@ -32,7 +32,7 @@ Fitcloak proporciona implementaciones simuladas de los objetos FreeMarker de Key
 | Helper | Comportamiento |
 |--------|----------------|
 | `${msg("key")}` | Mensaje localizado desde archivos `.properties` |
-| `${advancedMsg("key")}` | Igual que `msg` -- busqueda de mensaje con la clave como respaldo |
+| `${advancedMsg("key")}` | Igual que `msg` — búsqueda de mensaje con la clave como respaldo |
 | `${kcSanitize(value)}` | Devuelve el valor tal cual (simulado) |
 | `messagesPerField.existsError('field')` | Devuelve `false` |
 | `messagesPerField.get('field')` | Devuelve `""` |
@@ -41,5 +41,5 @@ Fitcloak proporciona implementaciones simuladas de los objetos FreeMarker de Key
 
 ## Referencia de Temas de Keycloak
 
-Para documentacion completa sobre el sistema de temas de Keycloak, consulta la guia oficial:
+Para documentación completa sobre el sistema de temas de Keycloak, consulta la guía oficial:
 [Desarrollo de Temas de Keycloak](https://www.keycloak.org/docs/latest/server_development/#_themes)

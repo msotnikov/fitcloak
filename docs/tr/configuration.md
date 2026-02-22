@@ -1,41 +1,41 @@
 ---
-title: "Yapilandirma"
+title: "Yapılandırma"
 nav_exclude: true
 lang: tr
 permalink: /tr/configuration/
 ---
 
-# Yapilandirma
+# Yapılandırma
 
-Tum secenekler icin [`config.example.json`](https://github.com/msotnikov/fitcloak/blob/main/config.example.json) dosyasina bakin.
+Tüm seçenekler için [`config.example.json`](https://github.com/msotnikov/fitcloak/blob/main/config.example.json) dosyasına bakın.
 
 ## Temel ayarlar
 
-| Alan | Aciklama |
+| Alan | Açıklama |
 |------|----------|
 | `serverConfig.theme` | Tema dizininizin yolu |
 | `serverConfig.port` | Sunucu portu |
-| `serverConfig.keycloakThemesPath` | Indirilen Keycloak temel temalarinin yolu |
-| `serverConfig.devResourcesUrl` | HMR icin Vite/Webpack gelistirme sunucusu URL'si |
-| `serverConfig.qaRealms` | Kontrol panelinde gosterilen hizli erisim baglantilari |
+| `serverConfig.keycloakThemesPath` | İndirilen Keycloak temel temalarının yolu |
+| `serverConfig.devResourcesUrl` | HMR için Vite/Webpack geliştirme sunucusu URL'si |
+| `serverConfig.qaRealms` | Kontrol panelinde gösterilen hızlı erişim bağlantıları |
 
 ## Sahte veri
 
-Keycloak'un normalde sablonlara iletigi veriler JSON araciligiyla saglanir:
+Keycloak'un normalde şablonlara ilettiği veriler JSON aracılığıyla sağlanır:
 
-- **Genel**: `config.json` (kok duzeyindeki alanlar: `realm`, `url`, `locale`)
-- **Tema basina**: `<theme-dir>/mock-data.json` (genel ayarlari gecersiz kilar)
-- **Istek basina**: URL sorgu parametreleri (en yuksek oncelik)
+- **Genel**: `config.json` (kök düzeyindeki alanlar: `realm`, `url`, `locale`)
+- **Tema başına**: `<theme-dir>/mock-data.json` (genel ayarları geçersiz kılar)
+- **İstek başına**: URL sorgu parametreleri (en yüksek öncelik)
 
-Ornek: `http://localhost:3030/login?realm.name=MyRealm&message.summary=Error&message.type=error`
+Örnek: `http://localhost:3030/login?realm.name=MyRealm&message.summary=Error&message.type=error`
 
-## URL Yonlendirme
+## URL Yönlendirme
 
-| URL deseni | Tema turu |
+| URL deseni | Tema türü |
 |------------|-----------|
-| `/*` (varsayilan) | Giris |
+| `/*` (varsayılan) | Giriş |
 | `/account/*` | Hesap |
 | `/email/*` | E-posta |
-| `/admin/*` | Yonetici |
+| `/admin/*` | Yönetici |
 
-`.ftl` uzantisi istege baglidir: `/login` ve `/login.ftl` ikisi de calisir.
+`.ftl` uzantısı isteğe bağlıdır: `/login` ve `/login.ftl` ikisi de çalışır.

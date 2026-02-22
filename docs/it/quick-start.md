@@ -23,7 +23,7 @@ chmod +x setup-keycloak-themes.sh
 ./setup-keycloak-themes.sh archive/release/23.0   # Oppure una versione specifica
 ```
 
-Lo script scarica i template FreeMarker di Keycloak e le risorse CSS di PatternFly dallo stesso commit, cosi le versioni corrispondono sempre.
+Lo script scarica i template FreeMarker di Keycloak e le risorse CSS di PatternFly dallo stesso commit, così le versioni corrispondono sempre.
 
 ## 3. Prova la demo
 

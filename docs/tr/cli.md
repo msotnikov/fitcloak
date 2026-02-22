@@ -1,11 +1,11 @@
 ---
-title: "CLI Secenekleri"
+title: "CLI Seçenekleri"
 nav_exclude: true
 lang: tr
 permalink: /tr/cli/
 ---
 
-# CLI Secenekleri
+# CLI Seçenekleri
 
 ```
 ./gradlew run --args="--port 8080"
@@ -15,10 +15,10 @@ permalink: /tr/cli/
 ./gradlew run --args="--version"
 ```
 
-| Bayrak | Kisa | Aciklama | Varsayilan |
+| Bayrak | Kısa | Açıklama | Varsayılan |
 |--------|------|----------|------------|
-| `--port` | `-p` | Sunucu portu | `3030` (veya yapilandirmadan) |
-| `--config` | `-c` | Yapilandirma dosyasi yolu | `config.json` |
-| `--theme` | `-t` | Tema yolu (yapilandirmayi gecersiz kilar) | — |
-| `--help` | `-h` | Yardimi goster | — |
-| `--version` | `-v` | Surumu goster | — |
+| `--port` | `-p` | Sunucu portu | `3030` (veya yapılandırmadan) |
+| `--config` | `-c` | Yapılandırma dosyası yolu | `config.json` |
+| `--theme` | `-t` | Tema yolu (yapılandırmayı geçersiz kılar) | — |
+| `--help` | `-h` | Yardımı göster | — |
+| `--version` | `-v` | Sürümü göster | — |

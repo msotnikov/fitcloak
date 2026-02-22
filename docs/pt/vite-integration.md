@@ -5,21 +5,21 @@ lang: pt
 permalink: /pt/vite-integration/
 ---
 
-# Integracao Vite / HMR
+# Integração Vite / HMR
 
-O diretorio `demo/` incluido e um exemplo funcional de integracao Vite com SCSS e React.
+O diretório `demo/` incluído é um exemplo funcional de integração Vite com SCSS e React.
 
 ## Como funciona
 
-1. Defina `devResourcesUrl` na configuracao: `"http://localhost:5173/"`
+1. Defina `devResourcesUrl` na configuração: `"http://localhost:5173/"`
 2. Em `theme.properties`, referencie os arquivos fonte diretamente: `styles=css/login.css src/theme.scss`
 3. O Fitcloak faz proxy de `/resources/*`, `/src/*`, `/@*`, `/node_modules/*` para o servidor de desenvolvimento Vite
-4. O Vite compila SCSS, JSX, TypeScript (ou outros pre-processadores) em tempo real
-5. Se o servidor de desenvolvimento nao estiver disponivel, recorre aos arquivos locais
+4. O Vite compila SCSS, JSX, TypeScript (ou outros pré-processadores) em tempo real
+5. Se o servidor de desenvolvimento não estiver disponível, recorre aos arquivos locais
 
-## Uso com seu proprio tema
+## Uso com seu próprio tema
 
-Configure um projeto Vite no diretorio do seu tema com SCSS/PostCSS/etc., referencie os arquivos fonte em `theme.properties` e aponte `devResourcesUrl` para o Vite.
+Configure um projeto Vite no diretório do seu tema com SCSS/PostCSS/etc., referencie os arquivos fonte em `theme.properties` e aponte `devResourcesUrl` para o Vite.
 
 ### Exemplo: adicionar SCSS
 
@@ -48,4 +48,4 @@ styles=css/login.css src/theme.scss
 
 ### Exemplo: adicionar React
 
-O tema demo mostra esse padrao -- consulte `demo/src/PasswordStrength.jsx` para um componente React que aprimora a pagina de login. A chave e usar `<script type="module">` no seu template `.ftl` personalizado em vez do mecanismo padrao `properties.scripts`.
+O tema demo mostra esse padrão -- consulte `demo/src/PasswordStrength.jsx` para um componente React que aprimora a página de login. A chave é usar `<script type="module">` no seu template `.ftl` personalizado em vez do mecanismo padrão `properties.scripts`.

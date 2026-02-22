@@ -7,19 +7,19 @@ permalink: /fr/contributing/
 
 # Contribuer
 
-## Developpement
+## Développement
 
 ```bash
 ./gradlew build    # Construire
-./gradlew test     # Executer les tests
-./gradlew run      # Demarrer le serveur
+./gradlew test     # Exécuter les tests
+./gradlew run      # Démarrer le serveur
 ```
 
-Necessite Java 17+.
+Nécessite Java 17+.
 
 ## Directives
 
-Consultez [CONTRIBUTING.md](https://github.com/msotnikov/fitcloak/blob/main/CONTRIBUTING.md) pour les directives de developpement et le processus de contribution.
+Consultez [CONTRIBUTING.md](https://github.com/msotnikov/fitcloak/blob/main/CONTRIBUTING.md) pour les directives de développement et le processus de contribution.
 
 ## Licence
 

@@ -1,20 +1,20 @@
 ---
-title: "Tema Gelistirme"
+title: "Tema Geliştirme"
 nav_exclude: true
 lang: tr
 permalink: /tr/theme-development/
 ---
 
-# Tema Gelistirme
+# Tema Geliştirme
 
-## Tema yapisi
+## Tema yapısı
 
 ```
 your-theme/
   login/
     theme.properties          # parent=keycloak, styles, scripts
-    login.ftl                 # Giris sayfasini gecersiz kil
-    register.ftl              # Kayit sayfasini gecersiz kil
+    login.ftl                 # Giriş sayfasını geçersiz kıl
+    register.ftl              # Kayıt sayfasını geçersiz kıl
     resources/
       css/styles.css
       js/script.js
@@ -22,24 +22,24 @@ your-theme/
     messages/
       messages_en.properties
       messages_ru.properties
-  mock-data.json              # Temaya ozel test verileri
+  mock-data.json              # Temaya özel test verileri
 ```
 
-## Sablon yardimcilari
+## Şablon yardımcıları
 
-Fitcloak, Keycloak'un FreeMarker nesnelerinin sahte uygulamalarini saglar:
+Fitcloak, Keycloak'un FreeMarker nesnelerinin sahte uygulamalarını sağlar:
 
-| Yardimci | Davranis |
+| Yardımcı | Davranış |
 |----------|----------|
-| `${msg("key")}` | `.properties` dosyalarindan yerellestirilmis mesaj |
-| `${advancedMsg("key")}` | `msg` ile ayni — anahtar yedek olarak kullanilarak mesaj arama |
-| `${kcSanitize(value)}` | Degeri oldugu gibi dondurur (sahte) |
-| `messagesPerField.existsError('field')` | `false` dondurur |
-| `messagesPerField.get('field')` | `""` dondurur |
-| `auth.showUsername()` | `true` dondurur |
-| `auth.showResetCredentials()` | `true` dondurur |
+| `${msg("key")}` | `.properties` dosyalarından yerelleştirilmiş mesaj |
+| `${advancedMsg("key")}` | `msg` ile aynı — anahtar yedek olarak kullanılarak mesaj arama |
+| `${kcSanitize(value)}` | Değeri olduğu gibi döndürür (sahte) |
+| `messagesPerField.existsError('field')` | `false` döndürür |
+| `messagesPerField.get('field')` | `""` döndürür |
+| `auth.showUsername()` | `true` döndürür |
+| `auth.showResetCredentials()` | `true` döndürür |
 
-## Keycloak Temalari Referansi
+## Keycloak Temaları Referansı
 
-Keycloak'un tema sistemi hakkinda kapsamli dokumantasyon icin resmi kilavuza bakin:
-[Keycloak Tema Gelistirme](https://www.keycloak.org/docs/latest/server_development/#_themes)
+Keycloak'un tema sistemi hakkında kapsamlı dokümantasyon için resmi kılavuza bakın:
+[Keycloak Tema Geliştirme](https://www.keycloak.org/docs/latest/server_development/#_themes)

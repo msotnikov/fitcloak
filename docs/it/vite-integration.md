@@ -7,7 +7,7 @@ permalink: /it/vite-integration/
 
 # Integrazione Vite / HMR
 
-La directory `demo/` inclusa e un esempio funzionante di integrazione Vite con SCSS e React.
+La directory `demo/` inclusa è un esempio funzionante di integrazione Vite con SCSS e React.
 
 ## Come funziona
 
@@ -15,7 +15,7 @@ La directory `demo/` inclusa e un esempio funzionante di integrazione Vite con S
 2. In `theme.properties`, referenzia i file sorgente direttamente: `styles=css/login.css src/theme.scss`
 3. Fitcloak fa da proxy per `/resources/*`, `/src/*`, `/@*`, `/node_modules/*` verso il server di sviluppo Vite
 4. Vite compila SCSS, JSX, TypeScript (o altri preprocessori) al volo
-5. Se il server di sviluppo non e disponibile, ricorre ai file locali
+5. Se il server di sviluppo non è disponibile, ricorre ai file locali
 
 ## Utilizzo con il tuo tema
 
@@ -48,4 +48,4 @@ styles=css/login.css src/theme.scss
 
 ### Esempio: aggiungere React
 
-Il tema demo mostra questo pattern -- consulta `demo/src/PasswordStrength.jsx` per un componente React che migliora la pagina di login. La chiave e usare `<script type="module">` nel tuo template `.ftl` personalizzato invece del meccanismo standard `properties.scripts`.
+Il tema demo mostra questo pattern -- consulta `demo/src/PasswordStrength.jsx` per un componente React che migliora la pagina di login. La chiave è usare `<script type="module">` nel tuo template `.ftl` personalizzato invece del meccanismo standard `properties.scripts`.

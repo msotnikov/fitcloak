@@ -5,7 +5,7 @@ lang: pt
 permalink: /pt/cli/
 ---
 
-# Opcoes de CLI
+# Opções de CLI
 
 ```
 ./gradlew run --args="--port 8080"
@@ -15,10 +15,10 @@ permalink: /pt/cli/
 ./gradlew run --args="--version"
 ```
 
-| Flag | Abreviacao | Descricao | Padrao |
+| Flag | Abreviação | Descrição | Padrão |
 |------|------------|-----------|--------|
 | `--port` | `-p` | Porta do servidor | `3030` (ou da config) |
-| `--config` | `-c` | Caminho do arquivo de configuracao | `config.json` |
+| `--config` | `-c` | Caminho do arquivo de configuração | `config.json` |
 | `--theme` | `-t` | Caminho do tema (sobrescreve config) | -- |
 | `--help` | `-h` | Mostrar ajuda | -- |
-| `--version` | `-v` | Mostrar versao | -- |
+| `--version` | `-v` | Mostrar versão | -- |

@@ -2,6 +2,7 @@
 title: "الرئيسية"
 nav_exclude: true
 lang: ar
+layout: home
 dir: rtl
 permalink: /ar/
 ---

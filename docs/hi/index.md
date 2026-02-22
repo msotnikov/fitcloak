@@ -2,6 +2,7 @@
 title: "मुखपृष्ठ"
 nav_exclude: true
 lang: hi
+layout: home
 permalink: /hi/
 ---
 

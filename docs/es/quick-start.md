@@ -5,7 +5,7 @@ lang: es
 permalink: /es/quick-start/
 ---
 
-# Inicio Rapido
+# Inicio Rápido
 
 ## 1. Clonar y configurar
 
@@ -19,15 +19,15 @@ cp config.example.json config.json
 
 ```bash
 chmod +x setup-keycloak-themes.sh
-./setup-keycloak-themes.sh                        # Ultima version (rama main)
-./setup-keycloak-themes.sh archive/release/23.0   # O una version especifica
+./setup-keycloak-themes.sh                        # Última versión (rama main)
+./setup-keycloak-themes.sh archive/release/23.0   # O una versión específica
 ```
 
 El script descarga las plantillas FreeMarker de Keycloak y los recursos CSS de PatternFly del mismo commit, por lo que las versiones siempre coinciden.
 
 ## 3. Probar la demo
 
-El proyecto incluye un tema de demostracion con integracion Vite/SCSS y un widget React de fortaleza de contrasena:
+El proyecto incluye un tema de demostración con integración Vite/SCSS y un widget React de fortaleza de contraseña:
 
 ```bash
 # Instalar dependencias de la demo
@@ -44,7 +44,7 @@ cd demo && npm run dev
 ./gradlew run
 ```
 
-Abre [http://localhost:3030](http://localhost:3030). Edita `demo/src/theme.scss` y actualiza -- los cambios aparecen instantaneamente a traves de Vite. La pagina de inicio de sesion incluye un indicador de fortaleza de contrasena con React para demostrar que el proxy Vite de Fitcloak maneja JSX/React ademas de SCSS.
+Abre [http://localhost:3030](http://localhost:3030). Edita `demo/src/theme.scss` y actualiza — los cambios aparecen instantáneamente a través de Vite. La página de inicio de sesión incluye un indicador de fortaleza de contraseña con React para demostrar que el proxy Vite de Fitcloak maneja JSX/React además de SCSS.
 
 ## 4. Usa tu propio tema
 
