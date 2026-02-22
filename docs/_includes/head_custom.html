@@ -1,0 +1,26 @@
+<!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your Measurement ID -->
+{% if site.ga_measurement_id %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_measurement_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.ga_measurement_id }}');
+</script>
+{% endif %}
+
+<style>
+.lang-switcher {
+  padding: 8px 12px;
+  font-size: 12px;
+}
+.lang-switcher select {
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+</style>

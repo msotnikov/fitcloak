@@ -31,7 +31,8 @@ Keycloakify takes a different path: it replaces FreeMarker entirely with a React
 - **Dashboard** — template browser with inheritance visualization and QA links
 - **Zero infrastructure** — just Java and Gradle, nothing else
 
-![Fitcloak Dashboard](docs/screenshot-dashboard.png)
+![Fitcloak Dashboard](docs/assets/images/screenshot-dashboard.png)
+![Fitcloak Register Page](docs/assets/images/screenshot-register.png)
 
 ## Quick Start
 

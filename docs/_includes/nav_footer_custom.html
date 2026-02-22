@@ -1,0 +1,34 @@
+<div class="lang-switcher">
+  <select onchange="switchLang(this.value)" aria-label="Language">
+    <option value="en" {% if page.lang == nil or page.lang == 'en' %}selected{% endif %}>English</option>
+    <option value="ar" {% if page.lang == 'ar' %}selected{% endif %}>العربية</option>
+    <option value="de" {% if page.lang == 'de' %}selected{% endif %}>Deutsch</option>
+    <option value="es" {% if page.lang == 'es' %}selected{% endif %}>Español</option>
+    <option value="fr" {% if page.lang == 'fr' %}selected{% endif %}>Français</option>
+    <option value="hi" {% if page.lang == 'hi' %}selected{% endif %}>हिन्दी</option>
+    <option value="it" {% if page.lang == 'it' %}selected{% endif %}>Italiano</option>
+    <option value="ja" {% if page.lang == 'ja' %}selected{% endif %}>日本語</option>
+    <option value="ko" {% if page.lang == 'ko' %}selected{% endif %}>한국어</option>
+    <option value="pt" {% if page.lang == 'pt' %}selected{% endif %}>Português</option>
+    <option value="ru" {% if page.lang == 'ru' %}selected{% endif %}>Русский</option>
+    <option value="tr" {% if page.lang == 'tr' %}selected{% endif %}>Türkçe</option>
+    <option value="zh" {% if page.lang == 'zh' %}selected{% endif %}>中文</option>
+  </select>
+</div>
+<script>
+function switchLang(lang) {
+  var path = location.pathname.replace(/^{{ site.baseurl }}/, '');
+  // Strip current lang prefix if present
+  var langs = ['ar','de','es','fr','hi','it','ja','ko','pt','ru','tr','zh'];
+  var parts = path.split('/').filter(Boolean);
+  if (parts.length > 0 && langs.indexOf(parts[0]) !== -1) {
+    parts.shift();
+  }
+  var page = parts.join('/') || '';
+  if (lang === 'en') {
+    location.href = '{{ site.baseurl }}/' + page;
+  } else {
+    location.href = '{{ site.baseurl }}/' + lang + '/' + page;
+  }
+}
+</script>
