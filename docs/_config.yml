@@ -12,6 +12,7 @@ heading_anchors: true
 
 aux_links:
   GitHub: https://github.com/msotnikov/fitcloak
+  Support on Patreon: https://www.patreon.com/c/msotnikov
 aux_links_new_tab: true
 
 nav_sort: order
@@ -21,3 +22,4 @@ ga_measurement_id: G-2V3FVH3R0C
 
 footer_content: >-
   Fitcloak is licensed under the <a href="https://github.com/msotnikov/fitcloak/blob/main/LICENSE">MIT License</a>.
+  <a href="https://www.patreon.com/c/msotnikov">Support on Patreon</a>.

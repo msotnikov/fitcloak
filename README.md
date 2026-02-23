@@ -257,6 +257,10 @@ Requires Java 17+.
 For comprehensive documentation on Keycloak's theming system, see the official guide:
 [Keycloak Theme Development](https://www.keycloak.org/docs/latest/server_development/#_themes)
 
+## Support
+
+If you find Fitcloak useful, consider [supporting the project on Patreon](https://www.patreon.com/c/msotnikov).
+
 ## License
 
 [MIT](LICENSE)
