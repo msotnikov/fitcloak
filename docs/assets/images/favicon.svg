@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <path d="M4 3h24l-2 22-10 5-10-5z" fill="#4051B5" stroke="#4051B5" stroke-width="1" stroke-linejoin="round"/>
-  <text x="9.5" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#fff">F</text>
+  <!-- Left cloak brace -->
+  <path d="M14 2 C9 2 5.5 5 5.5 9.5 C5.5 12.5 7 14 9.5 16 C7 18 5.5 19.5 5.5 22.5 C5.5 27 9 30 14 30 L12.5 27 C9.5 27 8 25 8 22.5 C8 20 9.5 18.5 12 16 C9.5 13.5 8 12 8 9.5 C8 7 9.5 5 12.5 5 Z" fill="#0066CC"/>
+  <!-- Right cloak brace -->
+  <path d="M18 2 C23 2 26.5 5 26.5 9.5 C26.5 12.5 25 14 22.5 16 C25 18 26.5 19.5 26.5 22.5 C26.5 27 23 30 18 30 L19.5 27 C22.5 27 24 25 24 22.5 C24 20 22.5 18.5 20 16 C22.5 13.5 24 12 24 9.5 C24 7 22.5 5 19.5 5 Z" fill="#0066CC"/>
+  <!-- F letter -->
+  <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#0066CC" text-anchor="middle">F</text>
 </svg>

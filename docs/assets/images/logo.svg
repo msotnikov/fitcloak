@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
-  <path d="M8 4h24l-2 28-10 6-10-6z" fill="#4051B5" stroke="#4051B5" stroke-width="1" stroke-linejoin="round"/>
-  <text x="13" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#fff">F</text>
-  <text x="38" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" fill="#2D3047" letter-spacing="-0.5">fitcloak</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" fill="none">
+  <!-- Left cloak brace -->
+  <path d="M15 2 C10 2 6.5 5 6.5 9.5 C6.5 12.5 8 14 10.5 16.5 C8 19 6.5 20.5 6.5 23.5 C6.5 28 10 31 15 31 L13.5 28 C10.5 28 9 26 9 23.5 C9 21 10.5 19.5 13 17 C10.5 14.5 9 13 9 9.5 C9 7 10.5 5 13.5 5 Z" fill="#0066CC"/>
+  <!-- Right cloak brace -->
+  <path d="M25 2 C30 2 33.5 5 33.5 9.5 C33.5 12.5 32 14 29.5 16.5 C32 19 33.5 20.5 33.5 23.5 C33.5 28 30 31 25 31 L26.5 28 C29.5 28 31 26 31 23.5 C31 21 29.5 19.5 27 17 C29.5 14.5 31 13 31 9.5 C31 7 29.5 5 26.5 5 Z" fill="#0066CC"/>
+  <!-- F letter -->
+  <text x="20" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#0066CC" text-anchor="middle">F</text>
+  <!-- Wordmark -->
+  <text x="42" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" fill="#0066CC" letter-spacing="-0.5">fitcloak</text>
 </svg>
