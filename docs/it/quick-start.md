@@ -2,7 +2,7 @@
 title: Guida Rapida
 nav_exclude: true
 lang: it
-permalink: /it/quick-start/
+permalink: /it/quick-start.html
 ---
 
 # Guida Rapida

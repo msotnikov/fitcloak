@@ -2,7 +2,7 @@
 title: Configuracion
 nav_exclude: true
 lang: es
-permalink: /es/configuration/
+permalink: /es/configuration.html
 ---
 
 # Configuración

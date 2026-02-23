@@ -2,7 +2,7 @@
 title: "配置"
 nav_exclude: true
 lang: zh
-permalink: /zh/configuration/
+permalink: /zh/configuration.html
 ---
 
 # 配置

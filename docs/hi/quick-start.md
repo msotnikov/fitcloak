@@ -2,7 +2,7 @@
 title: "त्वरित शुरुआत"
 nav_exclude: true
 lang: hi
-permalink: /hi/quick-start/
+permalink: /hi/quick-start.html
 ---
 
 # त्वरित शुरुआत

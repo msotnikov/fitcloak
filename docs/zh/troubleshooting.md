@@ -2,7 +2,7 @@
 title: "故障排除"
 nav_exclude: true
 lang: zh
-permalink: /zh/troubleshooting/
+permalink: /zh/troubleshooting.html
 ---
 
 # 故障排除

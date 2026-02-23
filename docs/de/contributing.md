@@ -2,7 +2,7 @@
 title: "Mitwirken"
 nav_exclude: true
 lang: de
-permalink: /de/contributing/
+permalink: /de/contributing.html
 ---
 
 # Mitwirken

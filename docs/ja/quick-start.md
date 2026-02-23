@@ -2,7 +2,7 @@
 title: "クイックスタート"
 nav_exclude: true
 lang: ja
-permalink: /ja/quick-start/
+permalink: /ja/quick-start.html
 ---
 
 # クイックスタート

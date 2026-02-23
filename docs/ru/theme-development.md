@@ -2,7 +2,7 @@
 title: "Разработка тем"
 nav_exclude: true
 lang: ru
-permalink: /ru/theme-development/
+permalink: /ru/theme-development.html
 ---
 
 # Разработка тем

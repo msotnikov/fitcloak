@@ -3,7 +3,7 @@ title: "المساهمة"
 nav_exclude: true
 lang: ar
 dir: rtl
-permalink: /ar/contributing/
+permalink: /ar/contributing.html
 ---
 
 # المساهمة

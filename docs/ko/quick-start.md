@@ -2,7 +2,7 @@
 title: "빠른 시작"
 nav_exclude: true
 lang: ko
-permalink: /ko/quick-start/
+permalink: /ko/quick-start.html
 ---
 
 # 빠른 시작

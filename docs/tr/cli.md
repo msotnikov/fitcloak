@@ -2,7 +2,7 @@
 title: "CLI Seçenekleri"
 nav_exclude: true
 lang: tr
-permalink: /tr/cli/
+permalink: /tr/cli.html
 ---
 
 # CLI Seçenekleri

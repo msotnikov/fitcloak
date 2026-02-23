@@ -3,7 +3,7 @@ title: "استكشاف الأخطاء"
 nav_exclude: true
 lang: ar
 dir: rtl
-permalink: /ar/troubleshooting/
+permalink: /ar/troubleshooting.html
 ---
 
 # استكشاف الأخطاء

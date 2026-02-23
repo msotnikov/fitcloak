@@ -2,7 +2,7 @@
 title: Inicio Rapido
 nav_exclude: true
 lang: pt
-permalink: /pt/quick-start/
+permalink: /pt/quick-start.html
 ---
 
 # Início Rápido

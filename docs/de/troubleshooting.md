@@ -2,7 +2,7 @@
 title: "Fehlerbehebung"
 nav_exclude: true
 lang: de
-permalink: /de/troubleshooting/
+permalink: /de/troubleshooting.html
 ---
 
 # Fehlerbehebung

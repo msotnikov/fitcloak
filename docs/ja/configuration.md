@@ -2,7 +2,7 @@
 title: "設定"
 nav_exclude: true
 lang: ja
-permalink: /ja/configuration/
+permalink: /ja/configuration.html
 ---
 
 # 設定

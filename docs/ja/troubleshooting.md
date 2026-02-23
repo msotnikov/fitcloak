@@ -2,7 +2,7 @@
 title: "トラブルシューティング"
 nav_exclude: true
 lang: ja
-permalink: /ja/troubleshooting/
+permalink: /ja/troubleshooting.html
 ---
 
 # トラブルシューティング

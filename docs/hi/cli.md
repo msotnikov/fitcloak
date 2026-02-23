@@ -2,7 +2,7 @@
 title: "CLI विकल्प"
 nav_exclude: true
 lang: hi
-permalink: /hi/cli/
+permalink: /hi/cli.html
 ---
 
 # CLI विकल्प

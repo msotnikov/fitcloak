@@ -2,7 +2,7 @@
 title: "コントリビュート"
 nav_exclude: true
 lang: ja
-permalink: /ja/contributing/
+permalink: /ja/contributing.html
 ---
 
 # コントリビュート

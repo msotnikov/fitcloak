@@ -2,7 +2,7 @@
 title: "Schnellstart"
 nav_exclude: true
 lang: de
-permalink: /de/quick-start/
+permalink: /de/quick-start.html
 ---
 
 # Schnellstart

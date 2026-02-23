@@ -2,7 +2,7 @@
 title: "Vite / HMR 統合"
 nav_exclude: true
 lang: ja
-permalink: /ja/vite-integration/
+permalink: /ja/vite-integration.html
 ---
 
 # Vite / HMR 統合

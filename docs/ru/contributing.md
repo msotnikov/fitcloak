@@ -2,7 +2,7 @@
 title: "Участие в проекте"
 nav_exclude: true
 lang: ru
-permalink: /ru/contributing/
+permalink: /ru/contributing.html
 ---
 
 # Участие в проекте

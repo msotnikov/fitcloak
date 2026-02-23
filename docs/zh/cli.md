@@ -2,7 +2,7 @@
 title: "CLI 选项"
 nav_exclude: true
 lang: zh
-permalink: /zh/cli/
+permalink: /zh/cli.html
 ---
 
 # CLI 选项

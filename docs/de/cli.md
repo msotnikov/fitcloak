@@ -2,7 +2,7 @@
 title: "CLI-Optionen"
 nav_exclude: true
 lang: de
-permalink: /de/cli/
+permalink: /de/cli.html
 ---
 
 # CLI-Optionen

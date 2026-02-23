@@ -2,7 +2,7 @@
 title: "योगदान"
 nav_exclude: true
 lang: hi
-permalink: /hi/contributing/
+permalink: /hi/contributing.html
 ---
 
 # योगदान

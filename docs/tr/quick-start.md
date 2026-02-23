@@ -2,7 +2,7 @@
 title: "Hızlı Başlangıç"
 nav_exclude: true
 lang: tr
-permalink: /tr/quick-start/
+permalink: /tr/quick-start.html
 ---
 
 # Hızlı Başlangıç

@@ -2,7 +2,7 @@
 title: Integracion Vite / HMR
 nav_exclude: true
 lang: es
-permalink: /es/vite-integration/
+permalink: /es/vite-integration.html
 ---
 
 # Integración Vite / HMR

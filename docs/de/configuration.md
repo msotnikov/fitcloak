@@ -2,7 +2,7 @@
 title: "Konfiguration"
 nav_exclude: true
 lang: de
-permalink: /de/configuration/
+permalink: /de/configuration.html
 ---
 
 # Konfiguration

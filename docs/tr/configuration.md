@@ -2,7 +2,7 @@
 title: "Yapılandırma"
 nav_exclude: true
 lang: tr
-permalink: /tr/configuration/
+permalink: /tr/configuration.html
 ---
 
 # Yapılandırma

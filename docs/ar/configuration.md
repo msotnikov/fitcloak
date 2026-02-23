@@ -3,7 +3,7 @@ title: "الإعدادات"
 nav_exclude: true
 lang: ar
 dir: rtl
-permalink: /ar/configuration/
+permalink: /ar/configuration.html
 ---
 
 # الإعدادات

@@ -2,7 +2,7 @@
 title: "문제 해결"
 nav_exclude: true
 lang: ko
-permalink: /ko/troubleshooting/
+permalink: /ko/troubleshooting.html
 ---
 
 # 문제 해결

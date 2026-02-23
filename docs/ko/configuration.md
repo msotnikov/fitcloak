@@ -2,7 +2,7 @@
 title: "설정"
 nav_exclude: true
 lang: ko
-permalink: /ko/configuration/
+permalink: /ko/configuration.html
 ---
 
 # 설정

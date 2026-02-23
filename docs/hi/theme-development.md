@@ -2,7 +2,7 @@
 title: "थीम विकास"
 nav_exclude: true
 lang: hi
-permalink: /hi/theme-development/
+permalink: /hi/theme-development.html
 ---
 
 # थीम विकास

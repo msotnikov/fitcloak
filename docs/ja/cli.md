@@ -2,7 +2,7 @@
 title: "CLI オプション"
 nav_exclude: true
 lang: ja
-permalink: /ja/cli/
+permalink: /ja/cli.html
 ---
 
 # CLI オプション

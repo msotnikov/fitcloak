@@ -2,7 +2,7 @@
 title: "기여하기"
 nav_exclude: true
 lang: ko
-permalink: /ko/contributing/
+permalink: /ko/contributing.html
 ---
 
 # 기여하기

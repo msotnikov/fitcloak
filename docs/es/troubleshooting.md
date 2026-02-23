@@ -2,7 +2,7 @@
 title: Solucion de Problemas
 nav_exclude: true
 lang: es
-permalink: /es/troubleshooting/
+permalink: /es/troubleshooting.html
 ---
 
 # Solución de Problemas

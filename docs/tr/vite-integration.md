@@ -2,7 +2,7 @@
 title: "Vite / HMR Entegrasyonu"
 nav_exclude: true
 lang: tr
-permalink: /tr/vite-integration/
+permalink: /tr/vite-integration.html
 ---
 
 # Vite / HMR Entegrasyonu

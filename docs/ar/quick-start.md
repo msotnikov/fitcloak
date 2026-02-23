@@ -3,7 +3,7 @@ title: "البدء السريع"
 nav_exclude: true
 lang: ar
 dir: rtl
-permalink: /ar/quick-start/
+permalink: /ar/quick-start.html
 ---
 
 # البدء السريع

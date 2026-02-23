@@ -2,7 +2,7 @@
 title: "Устранение неполадок"
 nav_exclude: true
 lang: ru
-permalink: /ru/troubleshooting/
+permalink: /ru/troubleshooting.html
 ---
 
 # Устранение неполадок

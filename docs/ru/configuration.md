@@ -2,7 +2,7 @@
 title: "Конфигурация"
 nav_exclude: true
 lang: ru
-permalink: /ru/configuration/
+permalink: /ru/configuration.html
 ---
 
 # Конфигурация

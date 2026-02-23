@@ -2,7 +2,7 @@
 title: "CLI 옵션"
 nav_exclude: true
 lang: ko
-permalink: /ko/cli/
+permalink: /ko/cli.html
 ---
 
 # CLI 옵션

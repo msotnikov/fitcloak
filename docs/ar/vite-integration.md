@@ -3,7 +3,7 @@ title: "تكامل Vite / HMR"
 nav_exclude: true
 lang: ar
 dir: rtl
-permalink: /ar/vite-integration/
+permalink: /ar/vite-integration.html
 ---
 
 # تكامل Vite / HMR

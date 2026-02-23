@@ -2,7 +2,7 @@
 title: "Sorun Giderme"
 nav_exclude: true
 lang: tr
-permalink: /tr/troubleshooting/
+permalink: /tr/troubleshooting.html
 ---
 
 # Sorun Giderme

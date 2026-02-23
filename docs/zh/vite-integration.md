@@ -2,7 +2,7 @@
 title: "Vite / HMR 集成"
 nav_exclude: true
 lang: zh
-permalink: /zh/vite-integration/
+permalink: /zh/vite-integration.html
 ---
 
 # Vite / HMR 集成

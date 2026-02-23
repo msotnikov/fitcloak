@@ -2,7 +2,7 @@
 title: Sviluppo Temi
 nav_exclude: true
 lang: it
-permalink: /it/theme-development/
+permalink: /it/theme-development.html
 ---
 
 # Sviluppo Temi

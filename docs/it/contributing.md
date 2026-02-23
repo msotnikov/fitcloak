@@ -2,7 +2,7 @@
 title: Contribuire
 nav_exclude: true
 lang: it
-permalink: /it/contributing/
+permalink: /it/contributing.html
 ---
 
 # Contribuire

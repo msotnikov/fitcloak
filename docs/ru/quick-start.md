@@ -2,7 +2,7 @@
 title: "Быстрый старт"
 nav_exclude: true
 lang: ru
-permalink: /ru/quick-start/
+permalink: /ru/quick-start.html
 ---
 
 # Быстрый старт

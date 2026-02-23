@@ -2,7 +2,7 @@
 title: "Katkı Sağlama"
 nav_exclude: true
 lang: tr
-permalink: /tr/contributing/
+permalink: /tr/contributing.html
 ---
 
 # Katkı Sağlama

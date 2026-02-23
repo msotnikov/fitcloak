@@ -2,7 +2,7 @@
 title: "테마 개발"
 nav_exclude: true
 lang: ko
-permalink: /ko/theme-development/
+permalink: /ko/theme-development.html
 ---
 
 # 테마 개발

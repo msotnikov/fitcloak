@@ -2,7 +2,7 @@
 title: "Параметры командной строки"
 nav_exclude: true
 lang: ru
-permalink: /ru/cli/
+permalink: /ru/cli.html
 ---
 
 # Параметры командной строки

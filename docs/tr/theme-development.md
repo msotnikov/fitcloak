@@ -2,7 +2,7 @@
 title: "Tema Geliştirme"
 nav_exclude: true
 lang: tr
-permalink: /tr/theme-development/
+permalink: /tr/theme-development.html
 ---
 
 # Tema Geliştirme

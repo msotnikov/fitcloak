@@ -2,7 +2,7 @@
 title: "Depannage"
 nav_exclude: true
 lang: fr
-permalink: /fr/troubleshooting/
+permalink: /fr/troubleshooting.html
 ---
 
 # Dépannage

@@ -2,7 +2,7 @@
 title: "テーマ開発"
 nav_exclude: true
 lang: ja
-permalink: /ja/theme-development/
+permalink: /ja/theme-development.html
 ---
 
 # テーマ開発

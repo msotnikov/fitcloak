@@ -2,7 +2,7 @@
 title: "Options CLI"
 nav_exclude: true
 lang: fr
-permalink: /fr/cli/
+permalink: /fr/cli.html
 ---
 
 # Options CLI

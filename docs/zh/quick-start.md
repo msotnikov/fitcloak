@@ -2,7 +2,7 @@
 title: "快速开始"
 nav_exclude: true
 lang: zh
-permalink: /zh/quick-start/
+permalink: /zh/quick-start.html
 ---
 
 # 快速开始

@@ -2,7 +2,7 @@
 title: "贡献"
 nav_exclude: true
 lang: zh
-permalink: /zh/contributing/
+permalink: /zh/contributing.html
 ---
 
 # 贡献

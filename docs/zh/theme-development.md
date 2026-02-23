@@ -2,7 +2,7 @@
 title: "主题开发"
 nav_exclude: true
 lang: zh
-permalink: /zh/theme-development/
+permalink: /zh/theme-development.html
 ---
 
 # 主题开发

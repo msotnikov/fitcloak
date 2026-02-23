@@ -2,7 +2,7 @@
 title: "समस्या निवारण"
 nav_exclude: true
 lang: hi
-permalink: /hi/troubleshooting/
+permalink: /hi/troubleshooting.html
 ---
 
 # समस्या निवारण

@@ -3,7 +3,7 @@ title: "تطوير القوالب"
 nav_exclude: true
 lang: ar
 dir: rtl
-permalink: /ar/theme-development/
+permalink: /ar/theme-development.html
 ---
 
 # تطوير القوالب

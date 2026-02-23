@@ -3,7 +3,7 @@ title: "خيارات سطر الأوامر"
 nav_exclude: true
 lang: ar
 dir: rtl
-permalink: /ar/cli/
+permalink: /ar/cli.html
 ---
 
 # خيارات سطر الأوامر

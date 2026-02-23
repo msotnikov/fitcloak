@@ -2,7 +2,7 @@
 title: "Theme-Entwicklung"
 nav_exclude: true
 lang: de
-permalink: /de/theme-development/
+permalink: /de/theme-development.html
 ---
 
 # Theme-Entwicklung

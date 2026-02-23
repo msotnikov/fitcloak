@@ -2,7 +2,7 @@
 title: "कॉन्फ़िगरेशन"
 nav_exclude: true
 lang: hi
-permalink: /hi/configuration/
+permalink: /hi/configuration.html
 ---
 
 # कॉन्फ़िगरेशन
