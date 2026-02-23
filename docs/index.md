@@ -11,7 +11,7 @@ A lightweight local preview server for developing **native Keycloak FreeMarker t
 
 [Get Started]({% link quick-start.md %}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View on GitHub](https://github.com/msotnikov/fitcloak){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Support on Patreon](https://www.patreon.com/c/msotnikov){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Support on Patreon](https://www.patreon.com/msotnikov/gift){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 

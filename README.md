@@ -259,7 +259,7 @@ For comprehensive documentation on Keycloak's theming system, see the official g
 
 ## Support
 
-If you find Fitcloak useful, consider [supporting the project on Patreon](https://www.patreon.com/c/msotnikov).
+If you find Fitcloak useful, consider [supporting the project on Patreon](https://www.patreon.com/msotnikov/gift).
 
 ## License
 
