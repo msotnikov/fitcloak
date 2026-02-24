@@ -10,8 +10,9 @@ permalink: /ru/
 
 Легковесный локальный сервер предварительного просмотра для разработки **нативных тем Keycloak на FreeMarker** — без Docker, базы данных или запуска полного экземпляра Keycloak.
 
-[Начать работу](./quick-start)
-[Посмотреть на GitHub](https://github.com/msotnikov/fitcloak)
+[Начать работу](./quick-start){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Посмотреть на GitHub](https://github.com/msotnikov/fitcloak){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Поддержать на Patreon](https://www.patreon.com/msotnikov/gift){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 

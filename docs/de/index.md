@@ -10,10 +10,21 @@ permalink: /de/
 
 Ein leichtgewichtiger lokaler Vorschauserver zur Entwicklung **nativer Keycloak-FreeMarker-Themes** -- ohne Docker, Datenbank oder laufende Keycloak-Instanz.
 
-[Erste Schritte](./quick-start)
-[Auf GitHub ansehen](https://github.com/msotnikov/fitcloak)
+[Erste Schritte](./quick-start){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[GitHub](https://github.com/msotnikov/fitcloak){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Auf Patreon unterstutzen](https://www.patreon.com/msotnikov/gift){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
+
+## Wie es funktioniert
+
+Fitcloak ist ein lokaler Server, der **unabhangig von Keycloak lauft**. Zum Starten wird nur Java 17+ benotigt.
+
+1. Sie erstellen oder bearbeiten ein Theme -- Standard-`.ftl`-Templates, CSS, JS
+2. Fitcloak baut die Templates nach derselben Vererbungskette wie Keycloak zusammen (`Base → Parent → Child`)
+3. Es setzt Testdaten ein und liefert die gerenderte Seite an Ihren Browser
+4. Wenn das Theme fertig ist -- kopieren Sie es nach Keycloak und wahlen es in der Admin-Konsole aus
+5. Optional konnen Sie Bundler (Vite, Webpack usw.) fur HMR (Hot Module Reload) verwenden, um mit jedem Web-Framework schneller zu entwickeln
 
 ## Warum Fitcloak?
 
@@ -22,6 +33,15 @@ Die Anpassung der Login-/Konto-/E-Mail-Seiten von Keycloak bedeutet normalerweis
 **Nehmen Sie ein beliebiges Keycloak-Template, richten Sie Fitcloak darauf und legen Sie los.** Der integrierte Dev-Server-Proxy ermöglicht die Nutzung jeder Frontend-Toolchain -- Vite, Webpack, Parcel -- mit jedem Framework oder Präprozessor: React, Vue, Svelte, SCSS, Tailwind, was immer Sie bevorzugen. FreeMarker rendert die Seitenstruktur, Ihre Tools übernehmen das Frontend, und HMR sorgt für sofortiges Feedback.
 
 Das gibt Ihnen die volle Flexibilität moderner Frontend-Entwicklung und bleibt dabei innerhalb des nativen Keycloak-Theming-Systems: keine benutzerdefinierten SPIs, kein Vendor-Lock-in -- nur Standard-`.ftl`-Templates, die auf jeder Keycloak-Instanz direkt deployt werden können.
+
+## Funktionen
+
+- **Sofortiges Feedback** -- `.ftl` / `.css` / `.properties` bearbeiten, Browser aktualisieren
+- **Vollständige Vererbung** -- emuliert Keycloaks `Base -> Parent -> Child`-Theme-Kette
+- **Vite/HMR-Integration** -- Proxy zu einem Dev-Server für Hot Module Replacement
+- **Dynamisches Testen** -- jede Template-Variable über URL-Query-Parameter überschreiben
+- **Dashboard** -- Template-Browser mit Vererbungsvisualisierung und QA-Links
+- **Keine Infrastruktur nötig** -- nur Java und Gradle, sonst nichts
 
 ### Fitcloak vs Keycloakify
 
@@ -35,14 +55,7 @@ Das gibt Ihnen die volle Flexibilität moderner Frontend-Entwicklung und bleibt 
 
 Keycloakify geht einen anderen Weg: Es ersetzt FreeMarker vollständig durch eine React-SPA und hat eine eigene Build-Pipeline. Fitcloak arbeitet mit dem Standard-Keycloak-Theming-System -- dieselben `.ftl`-Templates, dasselbe Deployment, nur ein deutlich besserer Entwicklungs-Workflow.
 
-## Funktionen
 
-- **Sofortiges Feedback** -- `.ftl` / `.css` / `.properties` bearbeiten, Browser aktualisieren
-- **Vollständige Vererbung** -- emuliert Keycloaks `Base -> Parent -> Child`-Theme-Kette
-- **Vite/HMR-Integration** -- Proxy zu einem Dev-Server für Hot Module Replacement
-- **Dynamisches Testen** -- jede Template-Variable über URL-Query-Parameter überschreiben
-- **Dashboard** -- Template-Browser mit Vererbungsvisualisierung und QA-Links
-- **Keine Infrastruktur nötig** -- nur Java und Gradle, sonst nichts
-
+### Aussehen
 ![Fitcloak Dashboard](../assets/images/screenshot-dashboard.png)
 ![Fitcloak Registrierungsseite](../assets/images/screenshot-register.png)

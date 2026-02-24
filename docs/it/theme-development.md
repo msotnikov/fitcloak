@@ -39,6 +39,25 @@ Fitcloak fornisce implementazioni simulate degli oggetti FreeMarker di Keycloak:
 | `auth.showUsername()` | Restituisce `true` |
 | `auth.showResetCredentials()` | Restituisce `true` |
 
+## Pacchettizzazione e installazione in Keycloak
+
+Fitcloak e uno strumento di sviluppo. Quando il tema e pronto, trasferiscilo in Keycloak:
+
+1. Se hai usato Vite/Webpack -- compila le risorse frontend:
+   ```bash
+   npm run build
+   ```
+   Assicurati che i file compilati si trovino nella directory `resources/` del tuo tema.
+
+2. Copia la directory del tema in Keycloak:
+   ```bash
+   cp -r your-theme /opt/keycloak/themes/your-theme
+   ```
+
+3. Riavvia Keycloak.
+
+4. Nella console di amministrazione, vai su **Realm Settings → Themes** e seleziona il tuo tema.
+
 ## Riferimento Temi Keycloak
 
 Per la documentazione completa sul sistema di temi di Keycloak, consulta la guida ufficiale:

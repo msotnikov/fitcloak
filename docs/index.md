@@ -15,6 +15,16 @@ A lightweight local preview server for developing **native Keycloak FreeMarker t
 
 ---
 
+## How it works
+
+Fitcloak is a local server that **runs separately from Keycloak**. Only Java 17+ is required.
+
+1. You create or edit a theme — standard `.ftl` templates, CSS, JS
+2. Fitcloak assembles templates using the same inheritance chain as Keycloak (`Base → Parent → Child`)
+3. It substitutes test data and serves the rendered page to your browser
+4. When the theme is ready — copy it to Keycloak and select it in the admin console
+5. Optionally, you can use bundlers (Vite, Webpack, etc.) for HMR (Hot Module Replacement) for faster development with any web framework
+
 ## Why Fitcloak?
 
 Customizing Keycloak's login/account/email pages normally means a painful feedback loop: rebuild the JAR, restart Keycloak, clear caches, refresh. Fitcloak eliminates all of that — just save your file and see the result.
@@ -22,6 +32,15 @@ Customizing Keycloak's login/account/email pages normally means a painful feedba
 **Take any Keycloak template, point Fitcloak at it, and start hacking.** The built-in dev server proxy means you can use any frontend toolchain — Vite, Webpack, Parcel — with any framework or preprocessor: React, Vue, Svelte, SCSS, Tailwind, whatever you prefer. FreeMarker renders the page structure, your tools handle the frontend, and HMR keeps the feedback loop instant.
 
 This gives you the full flexibility of modern frontend development while staying within Keycloak's native theming system: no custom SPIs, no vendor lock-in — just standard `.ftl` templates that deploy to any Keycloak instance as-is.
+## Features
+
+- **Instant feedback** — edit `.ftl` / `.css` / `.properties`, refresh browser
+- **Full inheritance** — emulates Keycloak's `Base -> Parent -> Child` theme chain
+- **Vite/HMR integration** — proxy to a dev server for hot module replacement
+- **Dynamic testing** — override any template variable via URL query parameters
+- **Dashboard** — template browser with inheritance visualization and QA links
+- **Zero infrastructure** — just Java and Gradle, nothing else
+
 
 ### Fitcloak vs Keycloakify
 
@@ -35,14 +54,6 @@ This gives you the full flexibility of modern frontend development while staying
 
 Keycloakify takes a different path: it replaces FreeMarker entirely with a React SPA and has its own build pipeline. Fitcloak works with the standard Keycloak theming system — the same `.ftl` templates, the same deployment, just a much better development workflow.
 
-## Features
-
-- **Instant feedback** — edit `.ftl` / `.css` / `.properties`, refresh browser
-- **Full inheritance** — emulates Keycloak's `Base -> Parent -> Child` theme chain
-- **Vite/HMR integration** — proxy to a dev server for hot module replacement
-- **Dynamic testing** — override any template variable via URL query parameters
-- **Dashboard** — template browser with inheritance visualization and QA links
-- **Zero infrastructure** — just Java and Gradle, nothing else
-
+###
 ![Fitcloak Dashboard](assets/images/screenshot-dashboard.png)
 ![Fitcloak Register Page](assets/images/screenshot-register.png)

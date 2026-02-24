@@ -39,6 +39,25 @@ Fitcloak, Keycloak'un FreeMarker nesnelerinin sahte uygulamalarını sağlar:
 | `auth.showUsername()` | `true` döndürür |
 | `auth.showResetCredentials()` | `true` döndürür |
 
+## Keycloak'a paketleme ve kurulum
+
+Fitcloak bir geliştirme aracıdır. Tema hazır olduğunda, Keycloak'a dağıtın:
+
+1. Vite/Webpack kullandıysanız — ön yüz kaynaklarını derleyin:
+   ```bash
+   npm run build
+   ```
+   Derlenen dosyaların temanızın `resources/` dizininde olduğundan emin olun.
+
+2. Tema dizinini Keycloak'a kopyalayın:
+   ```bash
+   cp -r your-theme /opt/keycloak/themes/your-theme
+   ```
+
+3. Keycloak'u yeniden başlatın.
+
+4. Yönetici konsolunda **Realm Settings → Themes** bölümüne gidin ve temanızı seçin.
+
 ## Keycloak Temaları Referansı
 
 Keycloak'un tema sistemi hakkında kapsamlı dokümantasyon için resmi kılavuza bakın:

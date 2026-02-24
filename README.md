@@ -2,6 +2,18 @@
 
 A lightweight local preview server for developing **native Keycloak FreeMarker themes** — without Docker, database, or running a full Keycloak instance.
 
+**[Documentation](https://fitcloak.org)** | **[GitHub](https://github.com/msotnikov/fitcloak)** | **[Support on Patreon](https://www.patreon.com/msotnikov/gift)**
+
+## How it works
+
+Fitcloak is a local server that **runs separately from Keycloak**. Only Java 17+ is required.
+
+1. You create or edit a theme — standard `.ftl` templates, CSS, JS
+2. Fitcloak assembles templates using the same inheritance chain as Keycloak (`Base → Parent → Child`)
+3. It substitutes test data and serves the rendered page to your browser
+4. When the theme is ready — copy it to Keycloak and select it in the admin console
+5. Optionally, you can use bundlers (Vite, Webpack, etc.) for HMR for faster development with any web framework
+
 ## Why Fitcloak?
 
 Customizing Keycloak's login/account/email pages normally means a painful feedback loop: rebuild the JAR, restart Keycloak, clear caches, refresh. Fitcloak eliminates all of that — just save your file and see the result.
@@ -9,18 +21,6 @@ Customizing Keycloak's login/account/email pages normally means a painful feedba
 **Take any Keycloak template, point Fitcloak at it, and start hacking.** The built-in dev server proxy means you can use any frontend toolchain — Vite, Webpack, Parcel — with any framework or preprocessor: React, Vue, Svelte, SCSS, Tailwind, whatever you prefer. FreeMarker renders the page structure, your tools handle the frontend, and HMR keeps the feedback loop instant.
 
 This gives you the full flexibility of modern frontend development while staying within Keycloak's native theming system: no custom SPIs, no vendor lock-in — just standard `.ftl` templates that deploy to any Keycloak instance as-is.
-
-### Fitcloak vs Keycloakify
-
-| | Fitcloak                                                       | [Keycloakify](https://github.com/keycloakify/keycloakify) |
-|---|----------------------------------------------------------------|---|
-| **Approach** | Native FreeMarker templates + any frontend tooling             | React components compiled to themes |
-| **Use case** | Customizing standard Keycloak themes with modern DX            | Building entirely new UIs with React |
-| **Frontend** | Any framework (React, Vue, Svelte, Alpine.js, vanilla) or none | React/TypeScript only |
-| **Learning curve** | Know FreeMarker = ready to go                                  | Requires React/TypeScript knowledge |
-| **Output** | Standard theme directory (works on any Keycloak)               | JAR with compiled React app |
-
-Keycloakify takes a different path: it replaces FreeMarker entirely with a React SPA and has its own build pipeline. Fitcloak works with the standard Keycloak theming system — the same `.ftl` templates, the same deployment, just a much better development workflow.
 
 ## Features
 
@@ -36,10 +36,15 @@ Keycloakify takes a different path: it replaces FreeMarker entirely with a React
 
 ## Quick Start
 
+### Requirements
+
+- **Java 17+** — the only required dependency. Gradle is downloaded automatically via the wrapper (`gradlew`).
+- Node.js is **not required** for basic theme development. It is only needed if you want to use bundlers like Vite, Webpack, etc.
+
 ### 1. Clone & configure
 
 ```bash
-git clone https://github.com/your-org/fitcloak.git
+git clone https://github.com/msotnikov/fitcloak.git
 cd fitcloak
 cp config.example.json config.json
 ```
@@ -52,26 +57,15 @@ chmod +x setup-keycloak-themes.sh
 ./setup-keycloak-themes.sh archive/release/23.0   # Or a specific version
 ```
 
-### 3. Try the demo
+The script downloads Keycloak's FreeMarker templates and PatternFly CSS assets from the same commit, so versions always match.
 
-The project includes a demo theme with Vite/SCSS integration and a React password strength widget:
+### 3. Run
 
 ```bash
-# Install demo dependencies
-cd demo && npm install && cd ..
-
-# Edit config.json and set:
-# "theme": "demo"
-# "devResourcesUrl": "http://localhost:5173/"
-
-# Start Vite dev server (in one terminal)
-cd demo && npm run dev
-
-# Start Fitcloak (in another terminal)
 ./gradlew run
 ```
 
-Open [http://localhost:3030](http://localhost:3030). Edit `demo/src/theme.scss` and refresh — changes appear instantly via Vite. The login page includes a React-powered password strength indicator to demonstrate that Fitcloak's Vite proxy handles JSX/React in addition to SCSS.
+Open [http://localhost:3030](http://localhost:3030) — you'll see the dashboard with a list of all available templates. This is Fitcloak — a local server that renders your themes without Keycloak.
 
 ### 4. Use your own theme
 
@@ -85,6 +79,69 @@ Point `serverConfig.theme` in `config.json` to your theme directory:
   }
 }
 ```
+
+Your theme directory should follow the standard Keycloak theme structure:
+
+```
+your-theme/
+  login/
+    theme.properties          # parent=keycloak, styles, scripts
+    login.ftl                 # Override login page
+    resources/
+      css/styles.css
+    messages/
+      messages_en.properties
+```
+
+### 5. Connect resources from a bundler (optional)
+
+Edit config.json and set:
+`"devResourcesUrl": "http://localhost:5173/"`
+
+```bash
+# Start Vite dev server (terminal 1)
+npm run dev
+
+# Start Fitcloak (terminal 2)
+./gradlew run
+```
+
+### 6. Package and install theme into Keycloak
+
+When the theme is ready, deploy it to Keycloak:
+
+1. Copy the theme directory to `<KEYCLOAK_HOME>/themes/`:
+
+   ```bash
+   cp -r your-theme /opt/keycloak/themes/your-theme
+   ```
+
+2. Restart Keycloak (or rebuild if using Docker).
+
+3. In Keycloak admin console, go to **Realm Settings → Themes** and select your theme.
+
+If you used Vite/Webpack — build frontend resources first (`npm run build`) and make sure the compiled files are in the `resources/` directory of your theme.
+
+### Running the demo theme
+
+The project includes a demo theme with Vite/SCSS integration and a React password strength widget. The demo **requires Node.js** since it uses Vite.
+
+```bash
+# Install demo dependencies
+cd demo && npm install && cd ..
+
+# Edit config.json:
+#   "theme": "demo"
+#   "devResourcesUrl": "http://localhost:5173/"
+
+# Start Vite dev server (terminal 1)
+cd demo && npm run dev
+
+# Start Fitcloak (terminal 2)
+./gradlew run
+```
+
+Open [http://localhost:3030](http://localhost:3030). Edit `demo/src/theme.scss` — changes appear instantly via Vite HMR.
 
 ## CLI Options
 
@@ -164,24 +221,6 @@ Fitcloak provides mock implementations of Keycloak's FreeMarker objects:
 | `auth.showUsername()` | Returns `true` |
 | `auth.showResetCredentials()` | Returns `true` |
 
-## Theme Structure
-
-```
-your-theme/
-  login/
-    theme.properties          # parent=keycloak, styles, scripts
-    login.ftl                 # Override login page
-    register.ftl              # Override registration
-    resources/
-      css/styles.css
-      js/script.js
-      img/logo.png
-    messages/
-      messages_en.properties
-      messages_ru.properties
-  mock-data.json              # Theme-specific test data
-```
-
 ## Troubleshooting
 
 ### "has evaluated to null or missing" errors
@@ -242,15 +281,6 @@ Keycloak templates reference many variables (`realm`, `url`, `auth`, `login`, `s
 
 **Approach:** look at the `.ftl` file, find all `${...}` expressions and `<#if ...>` conditions, then make sure each referenced object exists in your mock data. The demo's [`mock-data.json`](demo/mock-data.json) is a good starting point to copy from.
 
-## Development
-
-```bash
-./gradlew build    # Build
-./gradlew test     # Run tests
-./gradlew run      # Start server
-```
-
-Requires Java 17+.
 
 ## Keycloak Themes Reference
 
@@ -260,6 +290,16 @@ For comprehensive documentation on Keycloak's theming system, see the official g
 ## Support
 
 If you find Fitcloak useful, consider [supporting the project on Patreon](https://www.patreon.com/msotnikov/gift).
+
+## Development
+
+```bash
+./gradlew build    # Build
+./gradlew test     # Run tests
+./gradlew run      # Start server
+```
+
+Requires Java 17+.
 
 ## License
 

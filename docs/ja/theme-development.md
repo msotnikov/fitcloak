@@ -39,6 +39,25 @@ Fitcloak は Keycloak の FreeMarker オブジェクトのモック実装を提�
 | `auth.showUsername()` | `true` を返す |
 | `auth.showResetCredentials()` | `true` を返す |
 
+## Keycloak へのパッケージ化とインストール
+
+Fitcloak は開発ツールです。テーマの準備ができたら、Keycloak にデプロイします：
+
+1. Vite/Webpack を使用した場合 — フロントエンドリソースをビルドします：
+   ```bash
+   npm run build
+   ```
+   コンパイルされたファイルがテーマの `resources/` ディレクトリにあることを確認してください。
+
+2. テーマディレクトリを Keycloak にコピーします：
+   ```bash
+   cp -r your-theme /opt/keycloak/themes/your-theme
+   ```
+
+3. Keycloak を再起動します。
+
+4. 管理コンソールで **Realm Settings → Themes** に移動し、テーマを選択します。
+
 ## Keycloak テーマリファレンス
 
 Keycloak のテーマシステムに関する包括的なドキュメントについては、公式ガイドを参照してください：

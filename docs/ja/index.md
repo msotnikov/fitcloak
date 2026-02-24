@@ -10,10 +10,21 @@ permalink: /ja/
 
 **ネイティブ Keycloak FreeMarker テーマ**を開発するための軽量なローカルプレビューサーバー — Docker、データベース、完全な Keycloak インスタンスの実行は不要です。
 
-[はじめる](./quick-start)
-[GitHub で見る](https://github.com/msotnikov/fitcloak)
+[はじめる](./quick-start){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[GitHub で見る](https://github.com/msotnikov/fitcloak){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Patreon で支援する](https://www.patreon.com/msotnikov/gift){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
+
+## 仕組み
+
+Fitcloak は **Keycloak とは別に動作する**ローカルサーバーです。必要なのは Java 17+ のみです。
+
+1. テーマを作成または編集します — 標準的な `.ftl` テンプレート、CSS、JS
+2. Fitcloak は Keycloak と同じ継承チェーンを使用してテンプレートを組み立てます（`Base → Parent → Child`）
+3. テストデータを代入し、レンダリングされたページをブラウザに配信します
+4. テーマの準備ができたら — Keycloak にコピーし、管理コンソールで選択します
+5. オプションで、バンドラー（Vite、Webpack など）を使用して HMR（ホットモジュールリプレースメント）を活用し、任意のウェブフレームワークでより速い開発が可能です
 
 ## なぜ Fitcloak？
 
@@ -22,6 +33,15 @@ Keycloak のログイン/アカウント/メールページのカスタマイズ
 **任意の Keycloak テンプレートを選び、Fitcloak をそこに向けて、開発を始めましょう。** 組み込みの開発サーバープロキシにより、任意のフロントエンドツールチェーン — Vite、Webpack、Parcel — を、任意のフレームワークやプリプロセッサ（React、Vue、Svelte、SCSS、Tailwind など）と組み合わせて使用できます。FreeMarker がページ構造をレンダリングし、お使いのツールがフロントエンドを処理し、HMR がフィードバックループを即座に保ちます。
 
 これにより、Keycloak のネイティブテーマシステムに留まりながら、モダンなフロントエンド開発の完全な柔軟性が得られます：カスタム SPI 不要、ベンダーロックインなし — 任意の Keycloak インスタンスにそのままデプロイできる標準的な `.ftl` テンプレートだけです。
+
+## 機能
+
+- **即座のフィードバック** — `.ftl` / `.css` / `.properties` を編集し、ブラウザをリロード
+- **完全な継承** — Keycloak の `Base -> Parent -> Child` テーマチェーンをエミュレート
+- **Vite/HMR 統合** — ホットモジュールリプレースメントのための開発サーバープロキシ
+- **動的テスト** — URL クエリパラメータで任意のテンプレート変数をオーバーライド
+- **ダッシュボード** — 継承の可視化と QA リンク付きテンプレートブラウザ
+- **インフラ不要** — Java と Gradle だけ、他には何も不要
 
 ### Fitcloak vs Keycloakify
 
@@ -35,14 +55,6 @@ Keycloak のログイン/アカウント/メールページのカスタマイズ
 
 Keycloakify は異なるアプローチを取ります：FreeMarker を React SPA で完全に置き換え、独自のビルドパイプラインを持っています。Fitcloak は標準的な Keycloak テーマシステムで動作します — 同じ `.ftl` テンプレート、同じデプロイ方法、ただ開発ワークフローが大幅に改善されています。
 
-## 機能
-
-- **即座のフィードバック** — `.ftl` / `.css` / `.properties` を編集し、ブラウザをリロード
-- **完全な継承** — Keycloak の `Base -> Parent -> Child` テーマチェーンをエミュレート
-- **Vite/HMR 統合** — ホットモジュールリプレースメントのための開発サーバープロキシ
-- **動的テスト** — URL クエリパラメータで任意のテンプレート変数をオーバーライド
-- **ダッシュボード** — 継承の可視化と QA リンク付きテンプレートブラウザ
-- **インフラ不要** — Java と Gradle だけ、他には何も不要
-
+###
 ![Fitcloak ダッシュボード](../assets/images/screenshot-dashboard.png)
 ![Fitcloak 登録ページ](../assets/images/screenshot-register.png)

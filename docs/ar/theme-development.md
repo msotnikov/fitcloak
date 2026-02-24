@@ -40,6 +40,25 @@ your-theme/
 | `auth.showUsername()` | يُرجع `true` |
 | `auth.showResetCredentials()` | يُرجع `true` |
 
+## تعبئة وتثبيت في Keycloak
+
+Fitcloak هو أداة تطوير. عندما يصبح القالب جاهزاً، انشره في Keycloak:
+
+1. إذا استخدمت Vite/Webpack — قم ببناء موارد الواجهة الأمامية:
+   ```bash
+   npm run build
+   ```
+   تأكد من أن الملفات المُجمّعة موجودة في مجلد `resources/` الخاص بقالبك.
+
+2. انسخ مجلد القالب إلى Keycloak:
+   ```bash
+   cp -r your-theme /opt/keycloak/themes/your-theme
+   ```
+
+3. أعد تشغيل Keycloak.
+
+4. في لوحة الإدارة، انتقل إلى **Realm Settings → Themes** واختر قالبك.
+
 ## مرجع قوالب Keycloak
 
 للاطلاع على التوثيق الشامل لنظام قوالب Keycloak، راجع الدليل الرسمي:

@@ -39,6 +39,25 @@ Fitcloak Keycloak के FreeMarker ऑब्जेक्ट्स के मॉ
 | `auth.showUsername()` | `true` लौटाता है |
 | `auth.showResetCredentials()` | `true` लौटाता है |
 
+## Keycloak में पैकेज और इंस्टॉल करें
+
+Fitcloak एक डेवलपमेंट टूल है। जब थीम तैयार हो, इसे Keycloak में डिप्लॉय करें:
+
+1. यदि आपने Vite/Webpack का उपयोग किया — फ्रंटएंड रिसोर्स बिल्ड करें:
+   ```bash
+   npm run build
+   ```
+   सुनिश्चित करें कि कंपाइल की गई फ़ाइलें आपकी थीम की `resources/` डायरेक्टरी में हैं।
+
+2. थीम डायरेक्टरी को Keycloak में कॉपी करें:
+   ```bash
+   cp -r your-theme /opt/keycloak/themes/your-theme
+   ```
+
+3. Keycloak को रीस्टार्ट करें।
+
+4. एडमिन कंसोल में, **Realm Settings → Themes** पर जाएँ और अपनी थीम चुनें।
+
 ## Keycloak थीम संदर्भ
 
 Keycloak की थीमिंग सिस्टम के व्यापक दस्तावेज़ीकरण के लिए, आधिकारिक गाइड देखें:

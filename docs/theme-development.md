@@ -37,6 +37,25 @@ Fitcloak provides mock implementations of Keycloak's FreeMarker objects:
 | `auth.showUsername()` | Returns `true` |
 | `auth.showResetCredentials()` | Returns `true` |
 
+## Package and install into Keycloak
+
+Fitcloak is a development tool. When the theme is ready, deploy it to Keycloak:
+
+1. If you used Vite/Webpack — build frontend resources:
+   ```bash
+   npm run build
+   ```
+   Make sure the compiled files are in the `resources/` directory of your theme.
+
+2. Copy the theme directory to Keycloak:
+   ```bash
+   cp -r your-theme /opt/keycloak/themes/your-theme
+   ```
+
+3. Restart Keycloak.
+
+4. In the admin console, go to **Realm Settings → Themes** and select your theme.
+
 ## Keycloak Themes Reference
 
 For comprehensive documentation on Keycloak's theming system, see the official guide:

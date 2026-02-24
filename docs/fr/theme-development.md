@@ -39,6 +39,25 @@ Fitcloak fournit des implémentations simulées des objets FreeMarker de Keycloa
 | `auth.showUsername()` | Retourne `true` |
 | `auth.showResetCredentials()` | Retourne `true` |
 
+## Empaquetage et installation dans Keycloak
+
+Fitcloak est un outil de developpement. Quand le theme est pret, transferez-le dans Keycloak :
+
+1. Si vous avez utilise Vite/Webpack -- construisez les ressources frontend :
+   ```bash
+   npm run build
+   ```
+   Assurez-vous que les fichiers compiles se trouvent dans le repertoire `resources/` de votre theme.
+
+2. Copiez le repertoire du theme dans Keycloak :
+   ```bash
+   cp -r your-theme /opt/keycloak/themes/your-theme
+   ```
+
+3. Redemarrez Keycloak.
+
+4. Dans la console d'administration, allez dans **Realm Settings → Themes** et selectionnez votre theme.
+
 ## Référence des thèmes Keycloak
 
 Pour une documentation complète sur le système de thèmes de Keycloak, consultez le guide officiel :
